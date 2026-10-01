@@ -1,0 +1,1699 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>North &amp; Noble Care</title>
+<meta name="description" content="North & Noble Care provides compassionate, vetted in-home care for seniors — personal care, companionship, respite, dementia care, and more. Book a free consultation.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="North & Noble Care — Compassionate In-Home Care">
+<meta property="og:description" content="Trusted, vetted caregivers bringing warmth and support into your loved one's home. Book a free consultation today.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.northandnoblecare.com/"><!-- [PLACEHOLDER: FINAL DOMAIN] -->
+<meta property="og:image" content="https://www.northandnoblecare.com/og-image.jpg"><!-- [PLACEHOLDER: OG IMAGE] -->
+<meta property="og:locale" content="en_CA">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Nunito+Sans:wght@400;600;700;800&display=swap">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://www.northandnoblecare.com/#business",
+  "name": "North & Noble Care",
+  "image": "https://www.northandnoblecare.com/og-image.jpg",
+  "description": "North & Noble Care provides compassionate, vetted in-home care for seniors, including personal care, companionship, respite care, dementia care, and more.",
+  "url": "https://www.northandnoblecare.com/",
+  "telephone": "+1-000-000-0000",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "[PLACEHOLDER: STREET ADDRESS]",
+    "addressLocality": "[PLACEHOLDER: CITY]",
+    "addressRegion": "[PLACEHOLDER: PROVINCE/STATE]",
+    "postalCode": "[PLACEHOLDER: POSTAL CODE]",
+    "addressCountry": "CA"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "[PLACEHOLDER: LATITUDE]",
+    "longitude": "[PLACEHOLDER: LONGITUDE]"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "[PLACEHOLDER: OPEN TIME]",
+    "closes": "[PLACEHOLDER: CLOSE TIME]"
+  }],
+  "sameAs": [
+    "https://www.facebook.com/[PLACEHOLDER]",
+    "https://www.instagram.com/[PLACEHOLDER]"
+  ]
+}
+</script>
+
+<style>
+  /* ============================================
+     TOKENS — edit these to rebrand quickly
+     ============================================ */
+  :root{
+    color-scheme: light;
+
+    /* brand palette */
+    --navy:        #0F2A4A;
+    --navy-soft:   #1C3E63;
+    --navy-haze:   #4E6480;
+    --gold:        #C9A46A;
+    --gold-deep:   #AD8750;
+    --gold-light:  #E8D9BC;
+    --cream:       #FBF8F3;
+    --cream-dim:   #F3EDE1;
+    --white:       #FFFFFF;
+    --ink:         #2B2A27;
+    --ink-soft:    #5B5B57;
+    --line:        rgba(15,42,74,0.13);
+    --line-gold:   rgba(201,164,106,0.45);
+    --shadow:      0 20px 50px -24px rgba(15,42,74,0.35);
+    --shadow-sm:   0 8px 24px -12px rgba(15,42,74,0.28);
+
+    /* type */
+    --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    --font-body: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+    /* spacing */
+    --gutter: clamp(20px, 5vw, 64px);
+    --radius-lg: 28px;
+    --radius-md: 18px;
+    --radius-sm: 12px;
+
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  *, *::before, *::after{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior: auto; }
+    *, *::before, *::after{ animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+  }
+
+  body{
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  img{ max-width: 100%; display: block; }
+  [hidden]{ display: none !important; }
+
+  h1, h2, h3, h4{
+    font-family: var(--font-display);
+    color: var(--navy);
+    font-weight: 600;
+    line-height: 1.12;
+    margin: 0;
+    text-wrap: balance;
+  }
+  h1{ font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; }
+  h2{ font-size: clamp(2rem, 3.6vw, 2.9rem); }
+  h3{ font-size: clamp(1.35rem, 2vw, 1.6rem); }
+  p{ margin: 0; color: var(--ink-soft); }
+
+  a{ color: inherit; }
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible, summary:focus-visible{
+    outline: 3px solid var(--gold-deep);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  .eyebrow{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-body);
+    font-weight: 800;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+  }
+  .eyebrow::before{
+    content: "";
+    width: 9px; height: 9px;
+    background: var(--gold);
+    clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+  }
+
+  .wrap{
+    max-width: 1220px;
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+  }
+  section{ padding-block: clamp(64px, 9vw, 120px); }
+
+  .btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 30px;
+    border-radius: 999px;
+    font-family: var(--font-body);
+    font-weight: 800;
+    font-size: 0.98rem;
+    text-decoration: none;
+    border: 2px solid transparent;
+    cursor: pointer;
+    min-height: 48px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+    white-space: nowrap;
+  }
+  .btn:hover{ transform: translateY(-2px); }
+  .btn-gold{
+    background: var(--gold);
+    color: var(--navy);
+    box-shadow: var(--shadow-sm);
+  }
+  .btn-gold:hover{ background: var(--gold-deep); }
+  .btn-outline{
+    background: transparent;
+    border-color: var(--navy);
+    color: var(--navy);
+  }
+  .btn-outline:hover{ background: var(--navy); color: var(--white); }
+  .btn-outline-light{
+    background: transparent;
+    border-color: rgba(255,255,255,0.55);
+    color: var(--white);
+  }
+  .btn-outline-light:hover{ background: rgba(255,255,255,0.14); border-color: var(--white); }
+  .btn-block{ width: 100%; }
+
+  /* ============================================
+     SKIP LINK
+     ============================================ */
+  .skip-link{
+    position: absolute;
+    left: 12px;
+    top: -60px;
+    background: var(--navy);
+    color: var(--white);
+    padding: 12px 18px;
+    border-radius: 10px;
+    z-index: 999;
+    transition: top 0.2s ease;
+    font-weight: 700;
+  }
+  .skip-link:focus{ top: 12px; }
+
+  /* ============================================
+     LOGO MARK (heart cradled by hands + sparkle)
+     ============================================ */
+  .logo{
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+  .logo-mark{ width: 42px; height: 42px; flex-shrink: 0; }
+  .logo-word{
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.32rem;
+    color: var(--navy);
+    line-height: 1.05;
+  }
+  .logo-word small{
+    display: block;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.56rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    margin-top: 2px;
+  }
+  .logo--footer .logo-word{ color: var(--cream); }
+  .logo--footer .logo-word small{ color: var(--gold-light); }
+
+  /* ============================================
+     HEADER
+     ============================================ */
+  header.site{
+    position: sticky;
+    top: env(safe-area-inset-top, 0px);
+    z-index: 100;
+    background: rgba(251,248,243,0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-block: 14px;
+  }
+  .nav-links{
+    display: flex;
+    align-items: center;
+    gap: clamp(14px, 2vw, 28px);
+    list-style: none;
+    margin: 0; padding: 0;
+  }
+  .nav-links a{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.96rem;
+    color: var(--navy);
+    padding: 6px 2px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease, color 0.2s ease;
+  }
+  .nav-links a:hover{ border-color: var(--gold); }
+  .nav-actions{ display: flex; align-items: center; gap: 12px; }
+  .phone-btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--navy);
+    font-weight: 800;
+    font-size: 0.95rem;
+    white-space: nowrap;
+  }
+  .phone-btn svg{ width: 19px; height: 19px; color: var(--gold-deep); }
+
+  .hamburger{
+    display: none;
+    width: 48px; height: 48px;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    background: var(--white);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .hamburger span{
+    width: 22px; height: 2px;
+    background: var(--navy);
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+  html.menu-open .hamburger span:nth-child(1){ transform: translateY(7px) rotate(45deg); }
+  html.menu-open .hamburger span:nth-child(2){ opacity: 0; }
+  html.menu-open .hamburger span:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
+
+  @media (max-width: 920px){
+    .nav-links{
+      position: fixed;
+      inset: 0 0 0 auto;
+      top: 0;
+      height: 100vh;
+      height: 100dvh;
+      width: min(320px, 82vw);
+      background: var(--navy);
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 8px;
+      padding: 100px 36px 36px;
+      transform: translateX(100%);
+      transition: transform 0.32s ease;
+      box-shadow: -20px 0 60px rgba(0,0,0,0.25);
+    }
+    html.menu-open .nav-links{ transform: translateX(0); }
+    .nav-links a{ color: var(--cream); font-size: 1.15rem; width: 100%; padding-block: 10px; }
+    .nav-links a:hover{ color: var(--gold-light); }
+    .nav-cta-mobile{ margin-top: 18px; }
+    .phone-btn-label{ display: none; }
+    .hamburger{ display: inline-flex; }
+    .nav-actions .btn-gold{ padding-inline: 18px; }
+  }
+
+  .nav-scrim{
+    display: none;
+    position: fixed; inset: 0;
+    background: rgba(15,42,74,0.4);
+    z-index: 90;
+  }
+  html.menu-open .nav-scrim{ display: block; }
+
+  /* ============================================
+     HERO
+     ============================================ */
+  .hero{
+    padding-block: clamp(48px, 7vw, 88px);
+    position: relative;
+  }
+  .hero-grid{
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: clamp(32px, 5vw, 64px);
+    align-items: center;
+  }
+  .hero-copy p.lead{
+    font-size: clamp(1.1rem, 1.4vw, 1.25rem);
+    margin-top: 20px;
+    max-width: 52ch;
+    color: var(--ink-soft);
+  }
+  .hero-copy h1{ margin-top: 14px; }
+  .hero-ctas{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 32px;
+  }
+  .trust-badges{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-top: 40px;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
+  }
+  .trust-badge{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 800;
+    font-size: 0.88rem;
+    color: var(--navy);
+  }
+  .trust-badge svg{ width: 22px; height: 22px; color: var(--gold-deep); flex-shrink: 0; }
+
+  .hero-media{ position: relative; }
+  .hero-photo{
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    aspect-ratio: 4/5;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--line-gold);
+  }
+  .hero-photo img, .ph-fallback{
+    width: 100%; height: 100%;
+    object-fit: cover;
+  }
+  .ph-fallback{
+    position: absolute; inset: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(145deg, var(--navy) 0%, var(--navy-soft) 55%, var(--gold-deep) 130%);
+    color: var(--cream);
+    text-align: center;
+    padding: 24px;
+  }
+  .ph-fallback svg{ width: 46px; height: 46px; opacity: 0.85; }
+  .ph-fallback span{ font-size: 0.85rem; font-weight: 700; max-width: 22ch; opacity: 0.9; }
+  img.ph-img[data-broken="true"]{ display: none; }
+  img.ph-img[data-broken="true"] + .ph-fallback{ display: flex; }
+
+  .hero-card-float{
+    position: absolute;
+    left: -28px;
+    bottom: -24px;
+    background: var(--white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--line);
+    padding: 18px 22px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    max-width: 260px;
+  }
+  .hero-card-float svg{ width: 34px; height: 34px; color: var(--gold-deep); flex-shrink: 0; }
+  .hero-card-float strong{ display: block; color: var(--navy); font-size: 1.05rem; font-family: var(--font-display); }
+  .hero-card-float span{ font-size: 0.82rem; color: var(--ink-soft); }
+
+  @media (max-width: 920px){
+    .hero-grid{ grid-template-columns: 1fr; }
+    .hero-media{ order: -1; max-width: 420px; margin-inline: auto; }
+    .hero-card-float{ left: 12px; bottom: -18px; }
+  }
+
+  /* ============================================
+     REVEAL ON SCROLL (position-only; content stays visible)
+     ============================================ */
+  .reveal{ transform: translateY(26px); transition: transform 0.7s cubic-bezier(.2,.7,.2,1); }
+  html.js .reveal{ transform: translateY(26px); }
+  html.js .reveal.in-view{ transform: translateY(0); }
+  @media (prefers-reduced-motion: reduce){ .reveal{ transform: none !important; } }
+
+  /* ============================================
+     DIVIDER MOTIF
+     ============================================ */
+  .motif-divider{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-block: 8px 0;
+  }
+  .motif-divider .line{ width: 56px; height: 1px; background: var(--line-gold); }
+  .motif-divider svg{ width: 16px; height: 16px; color: var(--gold); }
+
+  /* ============================================
+     ABOUT
+     ============================================ */
+  .about{ background: var(--white); }
+  .about-grid{
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: clamp(32px, 5vw, 70px);
+    align-items: center;
+  }
+  .about-photo{
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    aspect-ratio: 1/1.05;
+    box-shadow: var(--shadow-sm);
+  }
+  .about-copy .section-head{ margin-bottom: 18px; }
+  .about-copy p{ margin-top: 16px; font-size: 1.05rem; }
+  .mission-box{
+    margin-top: 28px;
+    padding: 22px 26px;
+    background: var(--cream);
+    border-left: 4px solid var(--gold);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  }
+  .mission-box p{
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.22rem;
+    color: var(--navy);
+  }
+  @media (max-width: 860px){ .about-grid{ grid-template-columns: 1fr; } }
+
+  .section-head{ max-width: 680px; }
+  .section-head.center{ margin-inline: auto; text-align: center; }
+  .section-head h2{ margin-top: 10px; }
+  .section-head p{ margin-top: 16px; font-size: 1.08rem; }
+
+  /* ============================================
+     SERVICES
+     ============================================ */
+  .services{ background: var(--cream-dim); position: relative; }
+  .services-intro{ margin-bottom: 52px; }
+  .service-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+  @media (min-width: 720px){ .service-grid{ grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1040px){ .service-grid{ grid-template-columns: repeat(3, 1fr); } }
+
+  .service-card{
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    padding: 28px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    scroll-margin-top: 110px;
+  }
+  .service-icon{
+    width: 58px; height: 58px;
+    border-radius: 16px;
+    background: var(--gold-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .service-icon svg{ width: 30px; height: 30px; color: var(--navy); }
+  .service-card h3{ margin-top: 2px; }
+  .service-card p{ font-size: 0.98rem; }
+  .service-more-btn{
+    appearance: none;
+    background: none;
+    border: none;
+    padding: 0;
+    margin-top: 4px;
+    font-family: var(--font-body);
+    font-weight: 800;
+    font-size: 0.92rem;
+    color: var(--gold-deep);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-align: left;
+    width: fit-content;
+  }
+  .service-more-btn svg{ width: 14px; height: 14px; transition: transform 0.25s ease; }
+  .service-more-btn[aria-expanded="true"] svg{ transform: rotate(180deg); }
+  .service-detail{
+    font-size: 0.95rem;
+    padding-top: 10px;
+    border-top: 1px dashed var(--line);
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.35s ease;
+  }
+  .service-detail.open{ max-height: 320px; }
+  .service-detail-inner{ padding-top: 2px; padding-bottom: 2px; }
+  .service-detail ul{ margin: 10px 0 0; padding-left: 20px; }
+  .service-detail li{ margin-bottom: 6px; }
+
+  /* ============================================
+     HOW IT WORKS
+     ============================================ */
+  .steps{ background: var(--white); }
+  .steps-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+    margin-top: 56px;
+    counter-reset: step;
+  }
+  @media (max-width: 980px){ .steps-grid{ grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px){ .steps-grid{ grid-template-columns: 1fr; } }
+  .step{
+    position: relative;
+    padding-top: 10px;
+  }
+  .step-num{
+    font-family: var(--font-display);
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: var(--gold-light);
+    -webkit-text-stroke: 1.5px var(--gold-deep);
+    line-height: 1;
+    margin-bottom: 14px;
+  }
+  .step h3{ margin-bottom: 8px; }
+  .step p{ font-size: 0.96rem; }
+
+  /* ============================================
+     WHY US
+     ============================================ */
+  .why{
+    background: var(--navy);
+    color: var(--cream);
+    position: relative;
+    overflow: hidden;
+  }
+  .why::before{
+    content:"";
+    position: absolute;
+    width: 620px; height: 620px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,164,106,0.16), transparent 70%);
+    top: -220px; right: -160px;
+    pointer-events: none;
+  }
+  .why .section-head h2, .why .eyebrow{ color: var(--cream); }
+  .why .eyebrow{ color: var(--gold-light); }
+  .why .eyebrow::before{ background: var(--gold-light); }
+  .why .section-head p{ color: rgba(251,248,243,0.78); }
+  .why-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 54px;
+    position: relative;
+  }
+  @media (max-width: 980px){ .why-grid{ grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 620px){ .why-grid{ grid-template-columns: 1fr; } }
+  .why-item{
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(232,217,188,0.22);
+    border-radius: var(--radius-md);
+    padding: 26px 24px;
+  }
+  .why-item svg{ width: 28px; height: 28px; color: var(--gold-light); margin-bottom: 14px; }
+  .why-item h3{ color: var(--cream); font-size: 1.2rem; margin-bottom: 8px; }
+  .why-item p{ color: rgba(251,248,243,0.75); font-size: 0.95rem; }
+
+  /* ============================================
+     TESTIMONIALS
+     ============================================ */
+  .testimonials{ background: var(--cream); }
+  .t-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+    margin-top: 54px;
+  }
+  @media (max-width: 980px){ .t-grid{ grid-template-columns: 1fr; max-width: 560px; margin-inline: auto; } }
+  .t-card{
+    background: var(--white);
+    border-radius: var(--radius-md);
+    padding: 30px 28px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .t-card:nth-child(2){ transform: translateY(18px); }
+  @media (max-width: 980px){ .t-card:nth-child(2){ transform: none; } }
+  .t-stars{ display: flex; gap: 4px; }
+  .t-stars svg{ width: 16px; height: 16px; color: var(--gold); }
+  .t-quote{
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.14rem;
+    color: var(--navy);
+    line-height: 1.5;
+  }
+  .t-tag{
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+  }
+  .t-person{ display: flex; align-items: center; gap: 12px; margin-top: 4px; }
+  .t-avatar{
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    background: var(--gold-light);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--navy);
+    flex-shrink: 0;
+  }
+  .t-person strong{ display: block; color: var(--navy); font-size: 0.95rem; }
+  .t-person span{ font-size: 0.82rem; color: var(--ink-soft); }
+
+  /* ============================================
+     SERVICE AREA
+     ============================================ */
+  .area{ background: var(--white); }
+  .area-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    background: var(--cream-dim);
+    border-radius: var(--radius-lg);
+    padding: clamp(32px, 5vw, 56px);
+    align-items: center;
+  }
+  @media (max-width: 820px){ .area-box{ grid-template-columns: 1fr; } }
+  .area-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
+    list-style: none;
+    margin: 20px 0 0;
+    padding: 0;
+  }
+  .area-list li{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    color: var(--navy);
+    font-size: 0.96rem;
+  }
+  .area-list svg{ width: 14px; height: 14px; color: var(--gold-deep); flex-shrink: 0; }
+
+  /* ============================================
+     FAQ
+     ============================================ */
+  .faq{ background: var(--cream-dim); }
+  .faq-list{ max-width: 780px; margin: 54px auto 0; display: flex; flex-direction: column; gap: 14px; }
+  .faq-item{
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+  }
+  .faq-q{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    background: none;
+    border: none;
+    padding: 20px 24px;
+    text-align: left;
+    font-family: var(--font-body);
+    font-weight: 800;
+    font-size: 1.02rem;
+    color: var(--navy);
+    cursor: pointer;
+  }
+  .faq-q .plus{
+    flex-shrink: 0;
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    background: var(--gold-light);
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+  }
+  .faq-q .plus::before, .faq-q .plus::after{
+    content: "";
+    position: absolute;
+    background: var(--navy);
+  }
+  .faq-q .plus::before{ width: 11px; height: 2px; }
+  .faq-q .plus::after{ width: 2px; height: 11px; transition: transform 0.25s ease; }
+  .faq-item.open .faq-q .plus::after{ transform: rotate(90deg) scaleY(0); }
+  .faq-a{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+  }
+  .faq-item.open .faq-a{ max-height: 300px; }
+  .faq-a-inner{ padding: 0 24px 22px; font-size: 0.98rem; color: var(--ink-soft); }
+
+  /* ============================================
+     CTA BANNER
+     ============================================ */
+  .cta-banner{
+    background: linear-gradient(120deg, var(--navy) 0%, var(--navy-soft) 100%);
+    color: var(--cream);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-banner::after{
+    content:"";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 80% 20%, rgba(201,164,106,0.22), transparent 55%);
+  }
+  .cta-banner .wrap{ position: relative; }
+  .cta-banner h2{ color: var(--cream); max-width: 16ch; margin-inline: auto; }
+  .cta-banner p{ color: rgba(251,248,243,0.8); max-width: 54ch; margin: 18px auto 0; font-size: 1.08rem; }
+  .cta-banner .hero-ctas{ justify-content: center; margin-top: 34px; }
+
+  /* ============================================
+     CONTACT
+     ============================================ */
+  .contact{ background: var(--white); }
+  .contact-grid{
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: clamp(32px, 5vw, 64px);
+  }
+  @media (max-width: 920px){ .contact-grid{ grid-template-columns: 1fr; } }
+  .contact-info-card{
+    background: var(--navy);
+    color: var(--cream);
+    border-radius: var(--radius-lg);
+    padding: clamp(28px, 4vw, 40px);
+    height: fit-content;
+  }
+  .contact-info-card h3{ color: var(--cream); margin-bottom: 6px; }
+  .contact-info-card > p{ color: rgba(251,248,243,0.75); margin-top: 10px; }
+  .contact-rows{ margin-top: 30px; display: flex; flex-direction: column; gap: 20px; }
+  .contact-row{ display: flex; gap: 14px; align-items: flex-start; }
+  .contact-row svg{ width: 22px; height: 22px; color: var(--gold-light); flex-shrink: 0; margin-top: 2px; }
+  .contact-row strong{ display: block; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 3px; }
+  .contact-row a, .contact-row span{ color: var(--cream); text-decoration: none; font-weight: 600; }
+  .contact-social{ display: flex; gap: 12px; margin-top: 30px; }
+  .social-btn{
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(232,217,188,0.3);
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none;
+  }
+  .social-btn svg{ width: 18px; height: 18px; color: var(--cream); }
+
+  .contact-form{
+    background: var(--cream-dim);
+    border-radius: var(--radius-lg);
+    padding: clamp(26px, 4vw, 40px);
+    border: 1px solid var(--line);
+  }
+  .form-row{ display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  @media (max-width: 560px){ .form-row{ grid-template-columns: 1fr; } }
+  .field{ display: flex; flex-direction: column; gap: 7px; margin-top: 18px; }
+  .field:first-child{ margin-top: 0; }
+  .form-row .field{ margin-top: 0; }
+  .field label{ font-weight: 800; font-size: 0.9rem; color: var(--navy); }
+  .field .req{ color: var(--gold-deep); }
+  .field input, .field select, .field textarea{
+    font-family: var(--font-body);
+    font-size: 1rem;
+    padding: 13px 16px;
+    border-radius: 12px;
+    border: 1.5px solid var(--line);
+    background: var(--white);
+    color: var(--ink);
+    min-height: 48px;
+  }
+  .field textarea{ min-height: 110px; resize: vertical; }
+  .field small.err{
+    display: none;
+    color: #9B3B2E;
+    font-size: 0.84rem;
+    font-weight: 700;
+  }
+  .field.invalid input, .field.invalid select, .field.invalid textarea{ border-color: #9B3B2E; }
+  .field.invalid small.err{ display: block; }
+  .form-foot{ margin-top: 26px; display: flex; flex-direction: column; gap: 14px; }
+  .form-note{ font-size: 0.85rem; color: var(--ink-soft); }
+  .thank-you{
+    display: none;
+    text-align: center;
+    padding: 46px 20px;
+  }
+  .thank-you.show{ display: block; }
+  .contact-form form.hide{ display: none; }
+  .thank-you svg{ width: 54px; height: 54px; color: var(--gold-deep); margin-bottom: 16px; }
+  .thank-you h3{ margin-bottom: 10px; }
+
+  /* ============================================
+     FOOTER
+     ============================================ */
+  footer.site{
+    background: var(--navy);
+    color: var(--cream);
+    padding-block: 64px 32px;
+  }
+  .footer-grid{
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1.2fr;
+    gap: 40px;
+  }
+  @media (max-width: 860px){ .footer-grid{ grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 540px){ .footer-grid{ grid-template-columns: 1fr; } }
+  .footer-about p{ color: rgba(251,248,243,0.72); margin-top: 16px; font-size: 0.95rem; max-width: 34ch; }
+  .footer-col h4{
+    color: var(--gold-light);
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  .footer-col ul{ list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 11px; }
+  .footer-col a{ color: rgba(251,248,243,0.82); text-decoration: none; font-size: 0.95rem; }
+  .footer-col a:hover{ color: var(--gold-light); }
+  .footer-bottom{
+    margin-top: 54px;
+    padding-top: 26px;
+    border-top: 1px solid rgba(232,217,188,0.18);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: rgba(251,248,243,0.6);
+  }
+  .footer-bottom a{ color: rgba(251,248,243,0.6); text-decoration: underline; }
+
+  /* ============================================
+     FLOATING CALL BUTTON (mobile)
+     ============================================ */
+  .float-call{
+    display: none;
+    position: fixed;
+    left: 16px; right: 16px;
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+    z-index: 80;
+    background: var(--gold);
+    color: var(--navy);
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1rem;
+    padding: 16px;
+    border-radius: 999px;
+    box-shadow: 0 14px 34px -10px rgba(15,42,74,0.5);
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .float-call svg{ width: 20px; height: 20px; }
+  @media (max-width: 680px){
+    .float-call{ display: inline-flex; }
+    body{ padding-bottom: 86px; }
+    section.cta-banner-wrap{ padding-bottom: 0; }
+  }
+
+  .sr-only{
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+  }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- ============================================
+     HEADER
+     ============================================ -->
+<header class="site">
+  <div class="wrap nav-row">
+    <a href="#home" class="logo" aria-label="North & Noble Care — home">
+      <svg class="logo-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <path d="M6,30 Q24,46 42,30" stroke="#0F2A4A" stroke-width="3.4" stroke-linecap="round" fill="none"/>
+        <path d="M11,27 L11,22 M16,29 L16,23 M32,29 L32,23 M37,27 L37,22" stroke="#0F2A4A" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M24,34 C13,25 6,17 6,10.5 C6,5 10.2,1.5 15,2.2 C18.6,2.7 22,5.5 24,9 C26,5.5 29.4,2.7 33,2.2 C37.8,1.5 42,5 42,10.5 C42,17 35,25 24,34 Z" fill="#C9A46A"/>
+        <path d="M39,3 L40.3,6.2 L43.5,7.5 L40.3,8.8 L39,12 L37.7,8.8 L34.5,7.5 L37.7,6.2 Z" fill="#C9A46A"/>
+      </svg>
+      <span class="logo-word">North &amp; Noble<small>Care at Home</small></span>
+    </a>
+
+    <nav aria-label="Primary">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="nav-cta-mobile">
+          <a href="#contact" class="btn btn-gold btn-block">Free Consultation</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="tel:+10000000000" class="phone-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span class="phone-btn-label">[PLACEHOLDER PHONE]</span>
+      </a>
+      <a href="#contact" class="btn btn-gold">Free Consultation</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="nav-scrim" id="nav-scrim"></div>
+
+<main id="main">
+
+<!-- ============================================
+     HERO
+     ============================================ -->
+<section id="home" class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Home Care, Done With Heart</span>
+      <h1>Compassionate care for your loved one, right at home.</h1>
+      <p class="lead">North &amp; Noble Care brings trusted, vetted caregivers into your family's life — so your loved one gets to stay independent, and you get to just be their son or daughter again, not their full-time caregiver.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-gold">Book a Free Consultation</a>
+        <a href="tel:+10000000000" class="btn btn-outline">Call Us: [PLACEHOLDER PHONE]</a>
+      </div>
+      <div class="trust-badges">
+        <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5.25 3.4 9.74 8 11 4.6-1.26 8-5.75 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg>Licensed &amp; Insured</span>
+        <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20c.8-3.6 3.4-5.8 6.5-5.8s5.7 2.2 6.5 5.8"/><path d="M16.5 4.8a3.2 3.2 0 0 1 0 6.3"/><path d="M19 14.2c2.4.6 4 2.6 4.5 5.8"/></svg>Vetted Caregivers</span>
+        <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>Available 24/7</span>
+      </div>
+    </div>
+
+    <div class="hero-media">
+      <div class="hero-photo">
+        <img class="ph-img" alt="A caregiver smiling and sitting beside a senior woman at home, holding her hand" src="https://images.unsplash.com/photo-1576765608866-5b51f8d3c45c?auto=format&fit=crop&w=1000&q=80" onerror="this.dataset.broken='true'">
+        <div class="ph-fallback" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24,38 C13,29 6,21 6,14.5 C6,9 10.2,5.5 15,6.2 C18.6,6.7 22,9.5 24,13 C26,9.5 29.4,6.7 33,6.2 C37.8,5.5 42,9 42,14.5 C42,21 35,29 24,38 Z" fill="currentColor"/></svg>
+          <span>Placeholder photo — replace with real caregiver &amp; client photography</span>
+        </div>
+      </div>
+      <div class="hero-card-float">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <div>
+          <strong>[PLACEHOLDER: 250+] Families</strong>
+          <span>trust us with the care of someone they love</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     ABOUT
+     ============================================ -->
+<section id="about" class="about">
+  <div class="wrap about-grid">
+    <div class="about-photo reveal">
+      <img class="ph-img" alt="Two generations: an adult daughter laughing with her senior mother in a sunlit kitchen" src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=800&q=80" onerror="this.dataset.broken='true'">
+      <div class="ph-fallback" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24,38 C13,29 6,21 6,14.5 C6,9 10.2,5.5 15,6.2 C18.6,6.7 22,9.5 24,13 C26,9.5 29.4,6.7 33,6.2 C37.8,5.5 42,9 42,14.5 C42,21 35,29 24,38 Z" fill="currentColor"/></svg>
+        <span>Placeholder photo</span>
+      </div>
+    </div>
+    <div class="about-copy reveal">
+      <div class="section-head">
+        <span class="eyebrow">Our Story</span>
+        <h2>Why we started North &amp; Noble Care</h2>
+      </div>
+      <p>North &amp; Noble Care began with a simple, familiar struggle: watching someone we loved need more help than we could give alone, and not knowing who to trust with something so personal.</p>
+      <p>We built the kind of care company we wished had existed then — one where caregivers are chosen as carefully as you'd choose them for your own family, where communication is constant instead of occasional, and where "care" means showing up with patience, not just a checklist.</p>
+      <p>Today, our team supports families across [PLACEHOLDER: SERVICE AREA] with the same promise we started with: your loved one is treated like family, because to us, they are.</p>
+      <div class="mission-box">
+        <p>"Our mission is to help older adults live with dignity, comfort, and connection — in the place they feel most at home."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SERVICES
+     ============================================ -->
+<section id="services" class="services">
+  <div class="wrap">
+    <div class="section-head center services-intro reveal">
+      <span class="eyebrow">How We Help</span>
+      <h2>Care that fits your family's life</h2>
+      <p>Every family's situation is different, so our services are built to flex — from a few hours of weekly companionship to full-time, around-the-clock support. Tap "Learn more" on any service for details.</p>
+    </div>
+
+    <div class="service-grid">
+
+      <article class="service-card reveal" id="personal-care">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c-3.5 4.5-6 7.8-6 10.8a6 6 0 0 0 12 0C18 10.8 15.5 7.5 12 3Z"/></svg></div>
+        <h3>Personal Care</h3>
+        <p>Help with the everyday routines that keep your loved one comfortable, clean, and dignified — bathing, grooming, dressing, and getting around safely.</p>
+        <button class="service-more-btn" aria-expanded="false">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="service-detail"><div class="service-detail-inner">
+          <p>Our caregivers assist with bathing and hygiene, grooming and dressing, toileting, mobility and transfers, and safe positioning — always with patience and respect for your loved one's privacy and preferences.</p>
+        </div></div>
+      </article>
+
+      <article class="service-card reveal" id="companionship-care">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8.5" cy="9" r="3.4"/><circle cx="16" cy="11" r="2.6"/><path d="M2.5 19c.7-3.6 3.1-5.6 6-5.6s5.3 2 6 5.6"/><path d="M14.5 19c.4-2 1.6-3.3 3.4-3.3"/></svg></div>
+        <h3>Companionship Care</h3>
+        <p>Friendly conversation, shared meals, favorite hobbies, and someone warm to spend the day with — because connection matters as much as care.</p>
+        <button class="service-more-btn" aria-expanded="false">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="service-detail"><div class="service-detail-inner">
+          <p>Loneliness can be as hard on health as any physical condition. Our companion caregivers play cards, go for walks, cook together, read aloud, and simply keep your loved one engaged and smiling.</p>
+        </div></div>
+      </article>
+
+      <article class="service-card reveal" id="respite-care">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21c0-5 3.6-9 8-9s8 4 8 9"/><path d="M12 12V4"/><path d="M8 5a4 4 0 0 1 8 0"/></svg></div>
+        <h3>Respite Care</h3>
+        <p>A trusted break for family caregivers. Whether you need a few hours or a few days, we step in so you can rest, recharge, or run errands in peace.</p>
+        <button class="service-more-btn" aria-expanded="false">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="service-detail"><div class="service-detail-inner">
+          <p>Caring for a parent or spouse is a full-time act of love — and it's exhausting. Our respite caregivers step in for planned breaks, vacations, or just a quiet evening, giving you permission to care for yourself without guilt.</p>
+        </div></div>
+      </article>
+
+      <article class="service-card reveal" id="dementia-care">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7.2"/><path d="M11 6.5v4.5l3 2"/><path d="m19.5 5 1.4 1.4-2 2 1.5 2.4-2.6.9-.3 2.7-2.6-.7-1.6 2.2" stroke-dasharray="0"/></svg></div>
+        <h3>Dementia &amp; Alzheimer's Care</h3>
+        <p>Specially trained caregivers who understand memory loss, use gentle redirection, and create calm, familiar routines that ease confusion and anxiety.</p>
+        <button class="service-more-btn" aria-expanded="false">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="service-detail"><div class="service-detail-inner">
+          <p>Our team receives specific training in dementia and Alzheimer's care: communicating clearly, de-escalating agitation, supporting safe wandering prevention, and maintaining consistent routines that preserve dignity and moments of joy.</p>
+        </div></div>
+      </article>
+
+      <article class="service-card reveal" id="recovery-care">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 11.2a5.3 5.3 0 0 0-9-3.8L12 8.2l-.2-.2a5.3 5.3 0 1 0-7.5 7.5l.5.5L12 22.6l6.8-6.8.5-.5c1-1 1.5-2.3 1.5-3.6Z"/><path d="M7 13h2l1.5-3 2 5 1.5-2H16"/></svg></div>
+        <h3>Post-Hospital &amp; Recovery Care</h3>
+        <p>Extra hands during the critical weeks after a hospital stay or surgery, helping your loved one heal safely at home and avoid a return trip.</p>
+        <button class="service-more-btn" aria-expanded="false">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="service-detail"><div class="service-detail-inner">
+          <p>We support medication schedules, follow discharge instructions, assist with mobility reminders, prepare nourishing meals, and watch for warning signs — working alongside your medical team for a smooth, safe recovery.</p>
+        </div></div>
+      </article>
+
+      <article class="service-card reveal" id="palliative-care">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.5 4.5 0 0 1 12 7.8a4.5 4.5 0 0 1 7.5 2.7c0 5.4-7.5 10-7.5 10Z"/><path d="M3 17q5 2.5 9-1q4 3.5 9 1"/></svg></div>
+        <h3>Palliative &amp; End-of-Life Support</h3>
+        <p>Gentle, compassionate comfort care for your loved one, and emotional support for your whole family through one of life's hardest chapters.</p>
+        <button class="service-more-btn" aria-expanded="false">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="service-detail"><div class="service-detail-inner">
+          <p>Our caregivers provide comfort-focused support alongside hospice or palliative teams — assistance with daily needs, a calming presence, and respite for family members, so no one has to walk this road alone.</p>
+        </div></div>
+      </article>
+
+      <article class="service-card reveal" id="live-in-care">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/><path d="M15 3.5l.6 1.4 1.4.6-1.4.6-.6 1.4-.6-1.4-1.4-.6 1.4-.6Z"/></svg></div>
+        <h3>Overnight &amp; 24-Hour Live-In Care</h3>
+        <p>Around-the-clock peace of mind — whether that's overnight safety checks or a dedicated live-in companion for continuous support.</p>
+        <button class="service-more-btn" aria-expanded="false">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="service-detail"><div class="service-detail-inner">
+          <p>For families worried about falls, wandering, or nighttime needs, we offer overnight shifts and full live-in arrangements with consistent caregivers who learn your loved one's routines, preferences, and needs inside and out.</p>
+        </div></div>
+      </article>
+
+      <article class="service-card reveal" id="housekeeping">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10.5V20h12v-9.5"/><path d="M10 20v-5h4v5"/></svg></div>
+        <h3>Light Housekeeping, Meals &amp; Errands</h3>
+        <p>A tidy home and a full fridge go a long way. We handle light cleaning, home-cooked meals, laundry, and grocery runs.</p>
+        <button class="service-more-btn" aria-expanded="false">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="service-detail"><div class="service-detail-inner">
+          <p>From wiping counters and washing dishes to planning meals around dietary needs and picking up prescriptions or groceries, our caregivers help keep the home running smoothly.</p>
+        </div></div>
+      </article>
+
+      <article class="service-card reveal" id="medication-reminders">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="9" width="17" height="6" rx="3" transform="rotate(-25 12 12)"/><path d="m10.3 10.2 3.4 3.6" transform="rotate(-25 12 12)"/></svg></div>
+        <h3>Medication Reminders</h3>
+        <p>Friendly, consistent reminders to take the right medication at the right time — so missed doses aren't a worry you carry alone.</p>
+        <button class="service-more-btn" aria-expanded="false">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="service-detail"><div class="service-detail-inner">
+          <p>While our caregivers don't administer medication, they provide reliable reminders, help organize pill packs, and track adherence so you always know your loved one's routine is being followed.</p>
+        </div></div>
+      </article>
+
+      <article class="service-card reveal" id="transportation">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16V11l2-4.5h12L20 11v5"/><path d="M4 16h16"/><circle cx="7.5" cy="17.5" r="1.6"/><circle cx="16.5" cy="17.5" r="1.6"/></svg></div>
+        <h3>Transportation &amp; Appointment Escort</h3>
+        <p>Safe rides to appointments, errands, or social visits, with a caregiver who stays for the visit and helps you follow up on what was discussed.</p>
+        <button class="service-more-btn" aria-expanded="false">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="service-detail"><div class="service-detail-inner">
+          <p>Missing appointments, or driving when it's no longer safe, shouldn't be the alternative. Our caregivers provide door-to-door transportation and stay by your loved one's side during visits.</p>
+        </div></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     HOW IT WORKS
+     ============================================ -->
+<section id="how-it-works" class="steps">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Getting Started</span>
+      <h2>How home care begins, in four simple steps</h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step reveal">
+        <div class="step-num">01</div>
+        <h3>Free Consultation</h3>
+        <p>We start with a free, no-pressure conversation about your loved one's needs, your concerns, and what support would actually help.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">02</div>
+        <h3>Personalized Care Plan</h3>
+        <p>We build a care plan around your loved one's routines, preferences, and health needs — not a one-size-fits-all checklist.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">03</div>
+        <h3>Caregiver Matching</h3>
+        <p>We hand-pick a caregiver whose personality and experience fit your loved one, and introduce them before care begins.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">04</div>
+        <h3>Ongoing Check-Ins</h3>
+        <p>We stay in touch, adjusting the plan as needs change, so you always know how things are going.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     WHY US
+     ============================================ -->
+<section id="why-us" class="why">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Why Families Choose Us</span>
+      <h2>Care you can trust, from a team that shows up</h2>
+      <p>These aren't just values on a wall — they're how we make decisions every day.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5.25 3.4 9.74 8 11 4.6-1.26 8-5.75 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg>
+        <h3>Screened &amp; Trained Caregivers</h3>
+        <p>Background-checked, reference-verified, and trained caregivers you can trust in your home.</p>
+      </div>
+      <div class="why-item reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20c.8-3.6 3.4-5.8 6.5-5.8s5.7 2.2 6.5 5.8"/><path d="m16.5 9 1.3 1.3 2.4-2.6"/></svg>
+        <h3>Consistent Caregiver Matching</h3>
+        <p>The same familiar face whenever possible, because trust takes time to build.</p>
+      </div>
+      <div class="why-item reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18"/><path d="M8 3v4M16 3v4"/></svg>
+        <h3>Flexible Scheduling</h3>
+        <p>From a few hours a week to full-time live-in care, we flex around your family's life.</p>
+      </div>
+      <div class="why-item reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-8.4 8.4H9.6L4 22l1.3-4.4A8.4 8.4 0 1 1 21 11.5Z"/></svg>
+        <h3>Open Family Communication</h3>
+        <p>Regular updates so you're never left wondering how your loved one is doing.</p>
+      </div>
+      <div class="why-item reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.6-9.3-9.2C1.4 8.6 3 5.5 6 5c2-.3 3.6.8 4.6 2.2L12 9l1.4-1.8C14.4 5.8 16 4.7 18 5c3 .5 4.6 3.6 3.3 6.8C19 16.4 12 21 12 21Z" stroke-dasharray="0"/><path d="M12 3v3" opacity="0"/></svg>
+        <h3>Local, Hands-On Team</h3>
+        <p>A local team who knows the community and is reachable when you need us.</p>
+      </div>
+      <div class="why-item reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.2M20 12a8 8 0 0 1-14 5.2"/><path d="M18 3v4h-4M6 21v-4h4"/></svg>
+        <h3>No Long-Term Contracts</h3>
+        <p>Care that adjusts as needs change, without being locked into something that no longer fits.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     TESTIMONIALS
+     ============================================ -->
+<section id="testimonials" class="testimonials">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Families We've Supported</span>
+      <h2>What families are saying</h2>
+    </div>
+    <div class="t-grid">
+      <div class="t-card reveal">
+        <div class="t-stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.9L18.2 22 12 18.3 5.8 22 7 14.2l-5-4.9 7.1-.7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.9L18.2 22 12 18.3 5.8 22 7 14.2l-5-4.9 7.1-.7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.9L18.2 22 12 18.3 5.8 22 7 14.2l-5-4.9 7.1-.7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.9L18.2 22 12 18.3 5.8 22 7 14.2l-5-4.9 7.1-.7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.9L18.2 22 12 18.3 5.8 22 7 14.2l-5-4.9 7.1-.7z"/></svg>
+        </div>
+        <p class="t-quote">"[PLACEHOLDER TESTIMONIAL] Finding care for my mother felt impossible until North &amp; Noble Care stepped in. Her caregiver treats her like family, not a client."</p>
+        <span class="t-tag">[PLACEHOLDER]</span>
+        <div class="t-person">
+          <div class="t-avatar">[PH]</div>
+          <div><strong>[PLACEHOLDER NAME]</strong><span>Daughter of a client</span></div>
+        </div>
+      </div>
+
+      <div class="t-card reveal">
+        <div class="t-stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.9L18.2 22 12 18.3 5.8 22 7 14.2l-5-4.9 7.1-.7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.9L18.2 22 12 18.3 5.8 22 7 14.2l-5-4.9 7.1-.7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.9L18.2 22 12 18.3 5.8 22 7 14.2l-5-4.9 7.1-.7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.9L18.2 22 12 18.3 5.8 22 7 14.2l-5-4.9 7.1-.7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.9L18.2 22 12 18.3 5.8 22 7 14.2l-5-4.9 7.1-.7z"/></svg>
+        </div>
+        <p class="t-quote">"[PLACEHOLDER TESTIMONIAL] The consistency meant everything. Dad had the same caregiver for a year, and they genuinely became friends."</p>
+        <span class="t-tag">[PLACEHOLDER]</span>
+        <div class="t-person">
+          <div class="t-avatar">[PH]</div>
+          <div><strong>[PLACEHOLDER NAME]</strong><span>Son of a client</span></div>
+        </div>
+      </div>
+
+      <div class="t-card reveal">
+        <div class="t-stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.9L18.2 22 12 18.3 5.8 22 7 14.2l-5-4.9 7.1-.7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.9L18.2 22 12 18.3 5.8 22 7 14.2l-5-4.9 7.1-.7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.9L18.2 22 12 18.3 5.8 22 7 14.2l-5-4.9 7.1-.7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.9L18.2 22 12 18.3 5.8 22 7 14.2l-5-4.9 7.1-.7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.9L18.2 22 12 18.3 5.8 22 7 14.2l-5-4.9 7.1-.7z"/></svg>
+        </div>
+        <p class="t-quote">"[PLACEHOLDER TESTIMONIAL] From our first call, I felt heard. They matched us with someone wonderful within days, not weeks."</p>
+        <span class="t-tag">[PLACEHOLDER]</span>
+        <div class="t-person">
+          <div class="t-avatar">[PH]</div>
+          <div><strong>[PLACEHOLDER NAME]</strong><span>Granddaughter of a client</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SERVICE AREA
+     ============================================ -->
+<section id="service-area" class="area">
+  <div class="wrap">
+    <div class="area-box reveal">
+      <div>
+        <span class="eyebrow">Where We Work</span>
+        <h2 style="margin-top:10px;">Proudly serving [PLACEHOLDER: CALGARY] and surrounding areas</h2>
+        <p style="margin-top:16px; font-size:1.05rem;">Not sure if we cover your neighbourhood? Reach out — we're growing, and happy to point you in the right direction either way.</p>
+        <a href="#contact" class="btn btn-outline" style="margin-top:24px;">Check Your Area</a>
+      </div>
+      <ul class="area-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>[PLACEHOLDER Community 1]</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>[PLACEHOLDER Community 2]</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>[PLACEHOLDER Community 3]</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>[PLACEHOLDER Community 4]</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>[PLACEHOLDER Community 5]</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>[PLACEHOLDER Community 6]</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FAQ
+     ============================================ -->
+<section id="faq" class="faq">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Common Questions</span>
+      <h2>Questions families often ask</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How much does home care cost?<span class="plus" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Costs vary depending on the type of care, number of hours, and caregiver qualifications needed. [PLACEHOLDER: insert starting hourly rate]. During your free consultation, we'll walk through your loved one's needs and give you a clear, no-surprises estimate.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Is there a minimum number of hours?<span class="plus" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">[PLACEHOLDER: insert minimum-hours policy, e.g. "Our minimum visit is 3 hours"]. We know every family's situation is different, so we'll talk through what actually makes sense for your schedule and budget.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How are caregivers screened and trained?<span class="plus" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Every caregiver goes through [PLACEHOLDER: screening process, e.g. criminal background checks, reference checks, in-person interviews] and completes training in [PLACEHOLDER: training areas, e.g. first aid, dementia care, safe transfers] before ever stepping into a client's home.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Do you accept insurance or government funding?<span class="plus" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">[PLACEHOLDER: funding options, e.g. private pay, long-term care insurance, veterans' benefits, provincial programs]. We're happy to help you understand what options may be available for your family.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How quickly can care start?<span class="plus" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">In many cases, we can begin care within [PLACEHOLDER: timeframe, e.g. 24-48 hours] of your consultation. For urgent situations, let us know — we'll do everything we can to move quickly.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Can we change caregivers if it's not the right fit?<span class="plus" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Absolutely. The right match matters to us as much as it matters to you. If something doesn't feel right, tell us and we'll find a caregiver who fits better — no hard feelings, no hassle.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FINAL CTA BANNER
+     ============================================ -->
+<section class="cta-banner cta-banner-wrap">
+  <div class="wrap reveal">
+    <span class="eyebrow">We're Ready When You Are</span>
+    <h2 style="margin-top:12px;">Let's talk about care for your loved one.</h2>
+    <p>One conversation can bring a lot of relief. There's no cost and no pressure — just honest answers about what support could look like for your family.</p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn btn-gold">Book Your Free Consultation</a>
+      <a href="tel:+10000000000" class="btn btn-outline-light">Call Us: [PLACEHOLDER PHONE]</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CONTACT
+     ============================================ -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Get In Touch</span>
+      <h2>We're here to answer your questions</h2>
+      <p>No pressure, just a conversation. Fill out the form or reach us directly using the details below.</p>
+    </div>
+
+    <div class="contact-grid" style="margin-top:54px;">
+      <div class="contact-info-card reveal">
+        <h3>Contact Details</h3>
+        <p>Available to speak with you 24 hours a day, 7 days a week.</p>
+        <div class="contact-rows">
+          <div class="contact-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <div><strong>Phone</strong><a href="tel:+10000000000">[PLACEHOLDER PHONE]</a></div>
+          </div>
+          <div class="contact-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2.5"/><path d="m3 6 9 7 9-7"/></svg>
+            <div><strong>Email</strong><a href="mailto:hello@northandnoblecare.com">[PLACEHOLDER EMAIL]</a></div>
+          </div>
+          <div class="contact-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div><strong>Office</strong><span>[PLACEHOLDER ADDRESS, CITY, PROVINCE]</span></div>
+          </div>
+          <div class="contact-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+            <div><strong>Hours</strong><span>[PLACEHOLDER: office hours — care available 24/7]</span></div>
+          </div>
+        </div>
+        <div class="contact-social">
+          <a href="#" class="social-btn" aria-label="North & Noble Care on Facebook (placeholder link)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.6h2.6l.4-3h-3v-1.9c0-.9.3-1.5 1.6-1.5h1.5V4.2c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.1H8v3h2.7V21h2.8Z"/></svg></a>
+          <a href="#" class="social-btn" aria-label="North & Noble Care on Instagram (placeholder link)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1"/></svg></a>
+        </div>
+      </div>
+
+      <div class="contact-form reveal">
+        <form id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="field" id="field-name">
+              <label for="f-name">Full name <span class="req">*</span></label>
+              <input type="text" id="f-name" name="name" autocomplete="name" required>
+              <small class="err">Please enter your name.</small>
+            </div>
+            <div class="field" id="field-phone">
+              <label for="f-phone">Phone number <span class="req">*</span></label>
+              <input type="tel" id="f-phone" name="phone" autocomplete="tel" required>
+              <small class="err">Please enter a valid phone number.</small>
+            </div>
+          </div>
+
+          <div class="field" id="field-email">
+            <label for="f-email">Email address <span class="req">*</span></label>
+            <input type="email" id="f-email" name="email" autocomplete="email" required>
+            <small class="err">Please enter a valid email address.</small>
+          </div>
+
+          <div class="form-row">
+            <div class="field" id="field-who">
+              <label for="f-who">Who needs care?</label>
+              <select id="f-who" name="who_needs_care">
+                <option value="">Select one</option>
+                <option>Myself</option>
+                <option>My parent</option>
+                <option>My spouse</option>
+                <option>Another family member</option>
+              </select>
+            </div>
+            <div class="field" id="field-type">
+              <label for="f-type">Type of care</label>
+              <select id="f-type" name="care_type">
+                <option value="">Select one</option>
+                <option>Personal Care</option>
+                <option>Companionship Care</option>
+                <option>Respite Care</option>
+                <option>Dementia &amp; Alzheimer's Care</option>
+                <option>Post-Hospital / Recovery Care</option>
+                <option>Palliative &amp; End-of-Life Support</option>
+                <option>Overnight / 24-Hour Live-In Care</option>
+                <option>Housekeeping, Meals &amp; Errands</option>
+                <option>Medication Reminders</option>
+                <option>Transportation &amp; Escort</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field" id="field-message">
+            <label for="f-message">Tell us a little about your situation</label>
+            <textarea id="f-message" name="message" placeholder="e.g. My mother is 82 and lives alone. We're looking for a few hours of help a week with meals and companionship."></textarea>
+          </div>
+
+          <div class="form-foot">
+            <button type="submit" class="btn btn-gold btn-block">Send Message</button>
+            <p class="form-note">By submitting, you agree to be contacted by North &amp; Noble Care about your inquiry. We never share your information. [PLACEHOLDER: link to privacy policy]</p>
+          </div>
+        </form>
+
+        <div class="thank-you" id="thank-you">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5.25 3.4 9.74 8 11 4.6-1.26 8-5.75 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg>
+          <h3>Thank you — we've received your message.</h3>
+          <p>A member of our care team will reach out within one business day. If your situation is urgent, please call us directly at <a href="tel:+10000000000" style="color:var(--gold-deep); font-weight:800; text-decoration:none;">[PLACEHOLDER PHONE]</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="#home" class="logo logo--footer" aria-label="North & Noble Care — home">
+          <svg class="logo-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <path d="M6,30 Q24,46 42,30" stroke="#E8D9BC" stroke-width="3.4" stroke-linecap="round" fill="none"/>
+            <path d="M11,27 L11,22 M16,29 L16,23 M32,29 L32,23 M37,27 L37,22" stroke="#E8D9BC" stroke-width="2.6" stroke-linecap="round"/>
+            <path d="M24,34 C13,25 6,17 6,10.5 C6,5 10.2,1.5 15,2.2 C18.6,2.7 22,5.5 24,9 C26,5.5 29.4,2.7 33,2.2 C37.8,1.5 42,5 42,10.5 C42,17 35,25 24,34 Z" fill="#C9A46A"/>
+            <path d="M39,3 L40.3,6.2 L43.5,7.5 L40.3,8.8 L39,12 L37.7,8.8 L34.5,7.5 L37.7,6.2 Z" fill="#C9A46A"/>
+          </svg>
+          <span class="logo-word">North &amp; Noble<small>Care at Home</small></span>
+        </a>
+        <p>Compassionate, vetted in-home care for seniors across [PLACEHOLDER: SERVICE AREA]. Licensed, insured, and available 24/7.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#why-us">Why Choose Us</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#personal-care">Personal Care</a></li>
+          <li><a href="#companionship-care">Companionship</a></li>
+          <li><a href="#respite-care">Respite Care</a></li>
+          <li><a href="#dementia-care">Dementia Care</a></li>
+          <li><a href="#live-in-care">24-Hour Live-In Care</a></li>
+          <li><a href="#services">View All Services</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+10000000000">[PLACEHOLDER PHONE]</a></li>
+          <li><a href="mailto:hello@northandnoblecare.com">[PLACEHOLDER EMAIL]</a></li>
+          <li><span>[PLACEHOLDER ADDRESS]</span></li>
+          <li><span>[PLACEHOLDER: CITY, PROVINCE]</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; <span id="year">2026</span> North &amp; Noble Care. All rights reserved.</span>
+      <span><a href="#">Privacy Policy</a> &middot; <a href="#">Terms of Service</a> [PLACEHOLDER LINKS]</span>
+    </div>
+  </div>
+</footer>
+
+<a href="tel:+10000000000" class="float-call" aria-label="Call North & Noble Care now">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  Call Now
+</a>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Mobile menu
+  var html = document.documentElement;
+  var hamburger = document.getElementById('hamburger');
+  var scrim = document.getElementById('nav-scrim');
+  var navLinks = document.getElementById('nav-links');
+  function closeMenu(){
+    html.classList.remove('menu-open');
+    hamburger.setAttribute('aria-expanded','false');
+  }
+  function toggleMenu(){
+    var open = html.classList.toggle('menu-open');
+    hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  hamburger.addEventListener('click', toggleMenu);
+  scrim.addEventListener('click', closeMenu);
+  navLinks.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', closeMenu);
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeMenu();
+  });
+
+  // Reveal on scroll
+  var revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('in-view'); });
+  }
+
+  // Service "Learn more" toggles
+  document.querySelectorAll('.service-more-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var detail = btn.nextElementSibling;
+      var open = detail.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.firstChild.textContent = open ? 'Show less ' : 'Learn more ';
+    });
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var q = item.querySelector('.faq-q');
+    q.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(other){
+        if(other !== item){
+          other.classList.remove('open');
+          other.querySelector('.faq-q').setAttribute('aria-expanded','false');
+        }
+      });
+      item.classList.toggle('open', !isOpen);
+      q.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
+    });
+  });
+
+  // Contact form validation
+  var form = document.getElementById('contact-form');
+  var thankYou = document.getElementById('thank-you');
+  function setInvalid(fieldId, invalid){
+    var field = document.getElementById(fieldId);
+    field.classList.toggle('invalid', invalid);
+  }
+  function isValidEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+  function isValidPhone(v){ return v.replace(/[^0-9]/g,'').length >= 7; }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('f-name').value.trim();
+    var phone = document.getElementById('f-phone').value.trim();
+    var email = document.getElementById('f-email').value.trim();
+
+    var nameOk = name.length > 1;
+    var phoneOk = isValidPhone(phone);
+    var emailOk = isValidEmail(email);
+
+    setInvalid('field-name', !nameOk);
+    setInvalid('field-phone', !phoneOk);
+    setInvalid('field-email', !emailOk);
+
+    if(nameOk && phoneOk && emailOk){
+      form.classList.add('hide');
+      thankYou.classList.add('show');
+      thankYou.setAttribute('tabindex','-1');
+      thankYou.focus();
+    } else {
+      var firstInvalid = form.querySelector('.invalid input, .invalid select');
+      if(firstInvalid) firstInvalid.focus();
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
