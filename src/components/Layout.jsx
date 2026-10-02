@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
 import { NAV, PHONE_HREF, PHONE_LABEL } from '../content.js';
-import { useDesign } from '../design.jsx';
 import Button from './Button.jsx';
 import Icon from './Icon.jsx';
 import Logo from './Logo.jsx';
@@ -19,22 +18,6 @@ function ScrollManager() {
     window.scrollTo(0, 0);
   }, [pathname, hash]);
   return null;
-}
-
-function DesignSwitcher() {
-  const { design, setDesign } = useDesign();
-  return (
-    <div className="preview-bar">
-      <span>Design preview</span>
-      <div role="group" aria-label="Choose design variant">
-        {['a', 'b'].map((d) => (
-          <button key={d} type="button" className="preview-bar__btn" aria-pressed={design === d} onClick={() => setDesign(d)}>
-            Design {d.toUpperCase()}
-          </button>
-        ))}
-      </div>
-    </div>
-  );
 }
 
 function NavLinks({ onNavigate }) {
@@ -80,7 +63,6 @@ export default function Layout() {
   return (
     <>
       <a className="skip-link" href="#main">Skip to main content</a>
-      <DesignSwitcher />
       <ScrollManager />
 
       <header className="site-header">

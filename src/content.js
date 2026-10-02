@@ -66,7 +66,7 @@ export const SERVICES = [
   },
   {
     id: 'dementia-care',
-    icon: 'bulb',
+    icon: 'frame',
     name: 'Dementia & Alzheimer’s Care',
     short: 'Patient, calm support from caregivers trained in memory care.',
     description:
@@ -84,7 +84,7 @@ export const SERVICES = [
   },
   {
     id: 'recovery-care',
-    icon: 'cross',
+    icon: 'sunrise',
     name: 'Post-Hospital & Recovery Care',
     short: 'Extra hands at home after surgery, illness or a hospital stay.',
     description:
@@ -201,6 +201,7 @@ export const HOME_SERVICE_IDS = [
 export const PATHS = [
   {
     id: 'parent',
+    icon: 'homeHeart',
     label: 'My mom or dad',
     title: 'You want them safe and still themselves.',
     message:
@@ -209,6 +210,7 @@ export const PATHS = [
   },
   {
     id: 'partner',
+    icon: 'heart',
     label: 'My husband, wife or partner',
     title: 'You have been doing so much already.',
     message:
@@ -217,6 +219,7 @@ export const PATHS = [
   },
   {
     id: 'self',
+    icon: 'person',
     label: 'Myself',
     title: 'It is okay to ask for a little help.',
     message:
@@ -225,6 +228,7 @@ export const PATHS = [
   },
   {
     id: 'caregiver',
+    icon: 'coffee',
     label: 'I’m a family caregiver and I need a break',
     title: 'You deserve rest too.',
     message:
@@ -271,5 +275,15 @@ export const TRUST = [
   { icon: 'users', label: 'Vetted Caregivers' },
   { icon: 'clock', label: 'Available 24/7' },
 ];
+
+export const FOUNDER = {
+  paragraphs: [
+    '[PLACEHOLDER: the founder\u2019s own story. For example: When my own mother needed care, I learned how hard it is to find someone you trust with the person you love most.]',
+    'I started North & Noble Care so other families would not have to go through that alone. We hire caregivers we would welcome into our own homes, we take the time to match them well, and we keep you in the loop every step of the way.',
+    'If you are worried about someone right now, I hope you will call us. Even if we are not the right fit, we will help you find your next step.',
+  ],
+  name: '[PLACEHOLDER: founder name]',
+  role: '[PLACEHOLDER: role], North & Noble Care',
+};
 
 export const img = (name) => `/images/${name}`;

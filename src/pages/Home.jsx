@@ -2,10 +2,15 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../components/Button.jsx';
 import CtaBand from '../components/CtaBand.jsx';
+import FounderNote from '../components/FounderNote.jsx';
 import Icon, { Star } from '../components/Icon.jsx';
+import NoBreak from '../components/NoBreak.jsx';
+import Ornament from '../components/Ornament.jsx';
 import PathPicker from '../components/PathPicker.jsx';
+import PhotoFrame from '../components/PhotoFrame.jsx';
+import Testimonials from '../components/Testimonials.jsx';
 import {
-  CITY, COMMUNITIES, HOME_SERVICE_IDS, PHONE_HREF, PHONE_LABEL, SERVICES, STEPS, TESTIMONIALS, TRUST, WHY, img,
+  CITY, COMMUNITIES, HOME_SERVICE_IDS, PHONE_HREF, PHONE_LABEL, SERVICES, STEPS, TRUST, WHY, img,
 } from '../content.js';
 import usePageMeta from '../usePageMeta.js';
 
@@ -40,54 +45,55 @@ export default function Home() {
 
   return (
     <>
-      <section className="hero">
-        <div className="container hero__grid">
-          <div className="hero__copy">
-            <p className="eyebrow">In-home care for seniors</p>
-            <h1>Care that feels like home, for the people you love most.</h1>
-            <p className="lead">
-              You are worried about someone you love, and you are not sure where to start. We will listen first, then help you find the right kind of care at home.
-            </p>
-            <div className="actions">
-              <Button to="/contact">Book a Free Consultation</Button>
-              <Button href={PHONE_HREF} variant="ghost" icon="phone">Call {PHONE_LABEL}</Button>
+      <section className="hero bg-tint">
+        <div className="container">
+          <div className="hero__grid">
+            <div className="hero__copy">
+              <p className="eyebrow">In-home care for seniors</p>
+              <h1>Care that feels like home, for the people <em>you love most.</em></h1>
+              <p className="lead">
+                You are worried about someone you love, and you are not sure where to start. We will listen first, then help you find the right kind of care at home.
+              </p>
+              <div className="actions">
+                <Button to="/contact">Book a Free Consultation</Button>
+                <Button href={PHONE_HREF} variant="ghost" icon="phone">Call {PHONE_LABEL}</Button>
+              </div>
             </div>
-            <ul className="trust">
-              {TRUST.map((t) => (
-                <li key={t.label}>
-                  <Icon name={t.icon} size={22} />
-                  <span>{t.label}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="hero__media">
-            <div className="mask">
-              <img
+            <div className="hero__media">
+              <PhotoFrame
+                shape="arch"
+                priority
                 src={img('hero-caregiver-laughing.jpg')}
                 width="1600"
                 height="1131"
                 alt="A caregiver in lilac scrubs laughing with an older woman in a green sweatshirt at home"
-                fetchpriority="high"
               />
             </div>
           </div>
+          <ul className="trust">
+            {TRUST.map((t) => (
+              <li key={t.label}>
+                <Icon name={t.icon} size={20} />
+                <span>{t.label}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
       <PathPicker />
 
-      <section className="section" aria-labelledby="services-title">
+      <section className="section bg-dim" aria-labelledby="services-title">
         <div className="container">
           <header className="section__head">
             <h2 id="services-title">Support for the way life really is</h2>
             <p className="lead">From a few hours of company to round-the-clock care. Here are some of the ways we help.</p>
           </header>
-          <ul className="grid grid--3 cards">
+          <ul className="grid grid--3">
             {preview.map((s) => (
               <li key={s.id} className="card">
-                <span className="icon-badge"><Icon name={s.icon} size={28} /></span>
-                <h3><Link to={`/services#${s.id}`}>{s.name}</Link></h3>
+                <span className="icon-badge"><Icon name={s.icon} size={26} /></span>
+                <h3><Link to={`/services#${s.id}`}><NoBreak text={s.name} /></Link></h3>
                 <p>{s.short}</p>
               </li>
             ))}
@@ -98,17 +104,18 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section section--tint" aria-labelledby="steps-title">
+      <section className="section bg-cream" aria-labelledby="steps-title">
         <div className="container">
           <header className="section__head">
+            <Ornament />
             <h2 id="steps-title">How it works</h2>
             <p className="lead">Four simple steps. You are in charge the whole way.</p>
           </header>
-          <ol className="grid grid--4 steps">
+          <ol className="steps">
             {STEPS.map((s, i) => (
               <li key={s.title} className="step">
                 <span className="step__num" aria-hidden="true">{i + 1}</span>
-                <h3>{s.title}</h3>
+                <h3><NoBreak text={s.title} /></h3>
                 <p>{s.text}</p>
               </li>
             ))}
@@ -116,25 +123,23 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section" aria-labelledby="why-title">
+      <section className="section bg-dim" aria-labelledby="why-title">
         <div className="container why">
           <div className="why__media">
-            <div className="mask mask--soft">
-              <img
-                src={img('activity-coloring.jpg')}
-                width="1400"
-                height="990"
-                alt="A caregiver helping an older man and woman with a colouring activity at a table"
-                loading="lazy"
-              />
-            </div>
+            <PhotoFrame
+              shape="arch"
+              src={img('activity-coloring.jpg')}
+              width="1400"
+              height="990"
+              alt="A caregiver helping an older man and woman with a colouring activity at a table"
+            />
           </div>
           <div className="why__copy">
             <h2 id="why-title">Why families choose us</h2>
             <ul className="why__list">
               {WHY.map((w) => (
                 <li key={w.title}>
-                  <Star className="why__star" size={18} />
+                  <Star className="why__star" size={16} />
                   <div>
                     <h3>{w.title}</h3>
                     <p>{w.text}</p>
@@ -146,31 +151,22 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section section--tint" aria-labelledby="testi-title">
+      <FounderNote />
+
+      <Testimonials />
+
+      <section className="section bg-cream" aria-labelledby="area-title">
         <div className="container">
           <header className="section__head">
-            <h2 id="testi-title">What families say</h2>
+            <h2 id="area-title">Proudly serving {CITY} and surrounding areas</h2>
+            <p className="lead">We are your neighbours. Here are a few of the communities we visit.</p>
           </header>
-          <ul className="grid grid--3 testimonials">
-            {TESTIMONIALS.map((t, i) => (
-              <li key={i} className="quote">
-                <blockquote>
-                  <p>{t.quote}</p>
-                </blockquote>
-                <p className="quote__name">{t.name}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      <section className="section" aria-labelledby="area-title">
-        <div className="container area">
-          <h2 id="area-title">Proudly serving {CITY} and surrounding areas</h2>
-          <p className="lead">We are your neighbours. Here are a few of the communities we visit.</p>
-          <ul className="chips">
+          <ul className="communities">
             {COMMUNITIES.map((c) => (
-              <li key={c} className="chip">{c}</li>
+              <li key={c}>
+                <Star size={12} />
+                <span>{c}</span>
+              </li>
             ))}
           </ul>
         </div>
