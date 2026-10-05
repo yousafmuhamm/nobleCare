@@ -1,6 +1,6 @@
-export const PHONE_LABEL = '[PLACEHOLDER: phone]';
-export const PHONE_HREF = 'tel:+10000000000';
-export const CITY = '[PLACEHOLDER: Calgary]';
+export * from './content/business.js';
+export * from './content/about.js';
+export * from './content/faq.js';
 
 export const NAV = [
   { to: '/', label: 'Home' },
@@ -253,37 +253,10 @@ export const WHY = [
   { title: 'No long-term contracts', text: 'Stay for as long as it helps. You can pause or change care when you need to.' },
 ];
 
-export const TESTIMONIALS = [
-  { quote: '[PLACEHOLDER: testimonial from a family member about how caregiving helped their parent]', name: '[PLACEHOLDER: name], daughter' },
-  { quote: '[PLACEHOLDER: testimonial about peace of mind and communication with the team]', name: '[PLACEHOLDER: name], son' },
-  { quote: '[PLACEHOLDER: testimonial about a caregiver who became part of the family]', name: '[PLACEHOLDER: name], spouse' },
-];
-
-export const COMMUNITIES = [
-  '[PLACEHOLDER: community 1]',
-  '[PLACEHOLDER: community 2]',
-  '[PLACEHOLDER: community 3]',
-  '[PLACEHOLDER: community 4]',
-  '[PLACEHOLDER: community 5]',
-  '[PLACEHOLDER: community 6]',
-  '[PLACEHOLDER: community 7]',
-  '[PLACEHOLDER: community 8]',
-];
-
 export const TRUST = [
-  { icon: 'shield', label: 'Licensed & Insured' },
+  { icon: 'shield', label: 'Licensed & Insured' }, // SAMPLE: confirm you hold the licences and insurance you claim
   { icon: 'users', label: 'Vetted Caregivers' },
   { icon: 'clock', label: 'Available 24/7' },
 ];
-
-export const FOUNDER = {
-  paragraphs: [
-    '[PLACEHOLDER: the founder\u2019s own story. For example: When my own mother needed care, I learned how hard it is to find someone you trust with the person you love most.]',
-    'I started North & Noble Care so other families would not have to go through that alone. We hire caregivers we would welcome into our own homes, we take the time to match them well, and we keep you in the loop every step of the way.',
-    'If you are worried about someone right now, I hope you will call us. Even if we are not the right fit, we will help you find your next step.',
-  ],
-  name: '[PLACEHOLDER: founder name]',
-  role: '[PLACEHOLDER: role], North & Noble Care',
-};
 
 export const img = (name) => `/images/${name}`;

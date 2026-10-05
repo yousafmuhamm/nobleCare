@@ -62,7 +62,7 @@ export default function PathPicker() {
                 );
               })}
             </ul>
-            <Button to="/contact" icon="arrow">Talk to us about this</Button>
+            <Button to={`/contact?for=${current.id}`} icon="arrow">Talk to us about this</Button>
           </div>
         </div>
       </div>

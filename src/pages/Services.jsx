@@ -3,6 +3,7 @@ import Button from '../components/Button.jsx';
 import CtaBand from '../components/CtaBand.jsx';
 import Icon, { Star } from '../components/Icon.jsx';
 import NoBreak from '../components/NoBreak.jsx';
+import PageHero from '../components/PageHero.jsx';
 import PhotoFrame from '../components/PhotoFrame.jsx';
 import { SERVICES, img } from '../content.js';
 import usePageMeta from '../usePageMeta.js';
@@ -62,7 +63,7 @@ function Service({ s, index }) {
             <Star size={14} />
             <span>{s.fit}</span>
           </p>
-          <Button to="/contact" variant="ghost" icon="arrow">Ask about {s.name.toLowerCase().replace('alzheimer', 'Alzheimer')}</Button>
+          <Button to={`/contact?service=${s.id}`} variant="ghost" icon="arrow">Ask about {s.name.toLowerCase().replace('alzheimer', 'Alzheimer')}</Button>
         </div>
       </div>
     </section>
@@ -104,30 +105,21 @@ export default function Services() {
 
   return (
     <>
-      <section className="page-hero bg-tint">
-        <div className="container page-hero__grid">
-          <div className="page-hero__copy">
-            <p className="eyebrow">Our services</p>
-            <h1>Care that fits your family, <em>not the other way around</em></h1>
-            <p className="lead">
-              Every person is different. Start with one service or combine several, and change the plan whenever life changes.
-            </p>
-            <div className="actions">
-              <Button to="/contact">Book a Free Consultation</Button>
-            </div>
-          </div>
-          <div className="page-hero__media">
-            <PhotoFrame
-              shape="arch"
-              priority
-              src={img('chess-friends.jpg')}
-              width="1400"
-              height="933"
-              alt="Two older men enjoying a game of chess together outdoors"
-            />
-          </div>
+      <PageHero
+        eyebrow="Our services"
+        title={<>Care that fits your family, <em>not the other way around</em></>}
+        lead="Every person is different. Start with one service or combine several, and change the plan whenever life changes."
+        image={{
+          src: img('chess-friends.jpg'),
+          width: 1400,
+          height: 933,
+          alt: 'Two older men enjoying a game of chess together outdoors',
+        }}
+      >
+        <div className="actions">
+          <Button to="/contact">Book a Free Consultation</Button>
         </div>
-      </section>
+      </PageHero>
 
       <nav className="jump bg-cream" aria-label="Jump to a service">
         <div className="container">

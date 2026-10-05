@@ -10,27 +10,34 @@ import PathPicker from '../components/PathPicker.jsx';
 import PhotoFrame from '../components/PhotoFrame.jsx';
 import Testimonials from '../components/Testimonials.jsx';
 import {
-  CITY, COMMUNITIES, HOME_SERVICE_IDS, PHONE_HREF, PHONE_LABEL, SERVICES, STEPS, TRUST, WHY, img,
+  BUSINESS, CITY, COMMUNITIES, HOME_SERVICE_IDS, PHONE_HREF, PHONE_LABEL, SERVICES, STEPS, TRUST, WHY, img,
 } from '../content.js';
 import usePageMeta from '../usePageMeta.js';
 
 const JSON_LD = {
   '@context': 'https://schema.org',
-  '@type': 'HomeAndConstructionBusiness',
-  name: 'North & Noble Care',
-  description: 'In-home senior care for families in [PLACEHOLDER: Calgary] and surrounding areas.',
-  telephone: '[PLACEHOLDER: phone]',
-  email: '[PLACEHOLDER: email]',
-  address: { '@type': 'PostalAddress', streetAddress: '[PLACEHOLDER: address]', addressLocality: '[PLACEHOLDER: Calgary]' },
-  areaServed: '[PLACEHOLDER: Calgary]',
-  openingHours: '[PLACEHOLDER: hours]',
-  url: '[PLACEHOLDER: website URL]',
+  '@type': 'LocalBusiness',
+  name: BUSINESS.name,
+  description: `In-home senior care for families in ${CITY} and surrounding areas.`,
+  url: BUSINESS.website,
+  telephone: BUSINESS.phoneDisplay,
+  email: BUSINESS.email,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: BUSINESS.address.street,
+    addressLocality: BUSINESS.address.city,
+    addressRegion: BUSINESS.address.region,
+    postalCode: BUSINESS.address.postalCode,
+    addressCountry: 'CA',
+  },
+  areaServed: [CITY, ...COMMUNITIES],
+  openingHours: 'Mo-Fr 08:00-18:00', // SAMPLE: keep in step with BUSINESS.officeHours
 };
 
 export default function Home() {
   usePageMeta(
     'North & Noble Care | Gentle In-Home Senior Care',
-    'Compassionate in-home care for seniors in [PLACEHOLDER: Calgary] and surrounding areas. Book a free consultation with North & Noble Care.'
+    `Compassionate in-home care for seniors in ${CITY} and surrounding areas. Book a free consultation with North & Noble Care.`
   );
 
   useEffect(() => {

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
-import { NAV, PHONE_HREF, PHONE_LABEL } from '../content.js';
+import { BUSINESS, NAV, PHONE_HREF, PHONE_LABEL } from '../content.js';
 import Button from './Button.jsx';
 import Icon from './Icon.jsx';
 import Logo from './Logo.jsx';
@@ -135,14 +135,20 @@ export default function Layout() {
             <h2 className="site-footer__heading">Get in touch</h2>
             <ul className="site-footer__list">
               <li><a href={PHONE_HREF}>{PHONE_LABEL}</a></li>
-              <li>[PLACEHOLDER: email]</li>
-              <li>[PLACEHOLDER: address]</li>
-              <li>[PLACEHOLDER: hours]</li>
+              <li><a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a></li>
+              <li>
+                {BUSINESS.address.street}
+                <br />
+                {BUSINESS.address.city}, {BUSINESS.address.region} {BUSINESS.address.postalCode}
+              </li>
+              <li>Office: {BUSINESS.officeHours}</li>
+              <li>{BUSINESS.careHours}</li>
             </ul>
           </div>
         </div>
         <div className="container site-footer__legal">
-          <span>&copy; {new Date().getFullYear()} North &amp; Noble Care. [PLACEHOLDER: licence details]</span>
+          <span>&copy; {new Date().getFullYear()} {BUSINESS.name}. {BUSINESS.legalLine}</span>
+          <Link to="/privacy">Privacy policy</Link>
         </div>
       </footer>
 
