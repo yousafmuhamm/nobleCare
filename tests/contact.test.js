@@ -142,6 +142,23 @@ test('email HTML escapes user input and strips header-breaking characters', () =
   assert.equal(escapeHtml(`"'&`), '&quot;&#39;&amp;');
 });
 
+test('email is required only when email is the chosen contact method', () => {
+  assert.ok(validateContact(valid({ email: '', contactMethod: 'phone' })).ok);
+  assert.equal(
+    validateContact(valid({ email: '', contactMethod: 'email' })).errors.email,
+    'Please add your email address so we can reply.'
+  );
+  assert.equal(validateContact(valid({ email: 'not-an-email', contactMethod: 'phone' })).errors.email, 'Please check your email address.');
+});
+
+test('no reply-to is set when the visitor gives no email', async () => {
+  const fetchImpl = fakeFetch();
+  const res = await run(req(valid({ email: '', contactMethod: 'phone' })), { fetchImpl });
+  assert.equal(res.status, 200);
+  assert.equal('reply_to' in fetchImpl.calls[0].body, false);
+  assert.match(fetchImpl.calls[0].body.text, /Email: Not given/);
+});
+
 test('phone is required only when phone is the chosen contact method', () => {
   assert.ok(validateContact(valid({ phone: '', contactMethod: 'email' })).ok);
   assert.equal(validateContact(valid({ phone: '', contactMethod: 'phone' })).errors.phone, 'Please add a phone number so we can call you.');

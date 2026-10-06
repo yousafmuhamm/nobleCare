@@ -65,7 +65,7 @@ export function buildEmail(data, { serviceNames = {} } = {}) {
   const services = data.services.length ? data.services.map((id) => serviceNames[id] || id).join(', ') : 'Not specified';
   const rows = [
     ['Name', data.name],
-    ['Email', data.email],
+    ['Email', data.email || 'Not given'],
     ['Phone', data.phone || 'Not given'],
     ['Best way to reach them', labelFor(CONTACT_METHODS, data.contactMethod)],
     ['Care is for', labelFor(CARE_FOR_OPTIONS, data.careFor)],
@@ -160,7 +160,7 @@ export async function handleContactRequest(request, options = {}) {
       body: JSON.stringify({
         from: CONTACT_FROM_EMAIL,
         to: CONTACT_TO_EMAIL.split(',').map((e) => e.trim()).filter(Boolean),
-        reply_to: data.email,
+        ...(data.email ? { reply_to: data.email } : {}),
         subject: email.subject,
         text: email.text,
         html: email.html,

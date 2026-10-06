@@ -1,3 +1,4 @@
+import Button from '../components/Button.jsx';
 import ContactForm from '../components/ContactForm.jsx';
 import Icon from '../components/Icon.jsx';
 import PageHero from '../components/PageHero.jsx';
@@ -22,7 +23,13 @@ export default function Contact() {
         eyebrow="Contact us"
         title={<>Let&rsquo;s talk about care for <em>your loved one</em></>}
         lead={`Tell us a little about what is going on. There is no cost and no pressure, and we will get back to you ${BUSINESS.responseTime}.`}
-      />
+      >
+        <div className="actions contact-hero-call">
+          <Button href={PHONE_HREF} variant="ghost" icon="phone">
+            Prefer to talk? <span className="nowrap">Call {PHONE_LABEL}</span>
+          </Button>
+        </div>
+      </PageHero>
 
       <section className="section bg-cream" aria-label="Contact form and details">
         <div className="container contact">

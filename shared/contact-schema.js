@@ -74,10 +74,11 @@ export function validateContact(input) {
   else if (name.length > LIMITS.name) errors.name = `Please keep your name under ${LIMITS.name} characters.`;
   else if (/https?:|www\./i.test(name)) errors.name = 'Please enter just your name.';
 
-  if (!email) errors.email = 'Please enter your email address.';
-  else if (email.length > LIMITS.email || !EMAIL_RE.test(email)) errors.email = 'Please check your email address.';
-
   if (!ids(CONTACT_METHODS).includes(contactMethod)) errors.contactMethod = 'Please choose how we should reach you.';
+
+  // Whichever contact method is chosen becomes required; the other is optional.
+  if (email && (email.length > LIMITS.email || !EMAIL_RE.test(email))) errors.email = 'Please check your email address.';
+  else if (!email && contactMethod === 'email') errors.email = 'Please add your email address so we can reply.';
 
   if (phone && !PHONE_RE.test(phone)) errors.phone = 'Please check your phone number.';
   else if (!phone && contactMethod === 'phone') errors.phone = 'Please add a phone number so we can call you.';

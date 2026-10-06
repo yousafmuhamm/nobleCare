@@ -6,7 +6,6 @@ import {
 import { BUSINESS, PHONE_HREF, PHONE_LABEL, SERVICES } from '../content.js';
 import Icon from './Icon.jsx';
 
-const FIELD_ORDER = ['name', 'email', 'contactMethod', 'phone', 'careFor', 'timing', 'services', 'message', 'consent'];
 const FIELD_TARGET = {
   contactMethod: 'contactMethod-phone',
   services: `service-${SERVICE_IDS[0]}`,
@@ -74,6 +73,11 @@ export default function ContactForm() {
     if (errors[field]) setErrors((e) => ({ ...e, [field]: undefined }));
   };
 
+  const chooseMethod = (id) => {
+    setValues((v) => ({ ...v, contactMethod: id }));
+    setErrors((e) => ({ ...e, contactMethod: undefined, phone: undefined, email: undefined }));
+  };
+
   const toggleService = (id) => {
     set('services', values.services.includes(id) ? values.services.filter((s) => s !== id) : [...values.services, id]);
   };
@@ -123,14 +127,16 @@ export default function ContactForm() {
         <span className="icon-badge"><Icon name="check" size={28} /></span>
         <h2>Thank you, {first}.</h2>
         <p>
-          We have your message and will be in touch {BUSINESS.responseTime}. If you need help sooner, please call us at{' '}
+          We have your message and will {values.contactMethod === 'email' ? 'email' : 'call'} you {BUSINESS.responseTime}. If you need help sooner, please call us at{' '}
           <a href={PHONE_HREF}>{PHONE_LABEL}</a>.
         </p>
       </div>
     );
   }
 
-  const errorList = FIELD_ORDER.filter((f) => errors[f]);
+  const contactOrder = values.contactMethod === 'email' ? ['email', 'phone'] : ['phone', 'email'];
+  const fieldOrder = ['name', 'contactMethod', ...contactOrder, 'careFor', 'timing', 'services', 'message', 'consent'];
+  const errorList = fieldOrder.filter((f) => errors[f]);
   const describedBy = (field, hint) => [hint, errors[field] ? `${field}-error` : null].filter(Boolean).join(' ') || undefined;
 
   return (
@@ -161,37 +167,26 @@ export default function ContactForm() {
         </div>
       )}
 
-      <div className="form-grid">
-        <div className="field">
-          <label htmlFor="name">Your name <span aria-hidden="true">*</span></label>
-          <input
-            id="name" name="name" type="text" autoComplete="name" maxLength={LIMITS.name} required
-            value={values.name} onChange={(e) => set('name', e.target.value)}
-            aria-invalid={!!errors.name} aria-describedby={describedBy('name')}
-          />
-          <FieldError id="name-error" message={errors.name} />
-        </div>
-
-        <div className="field">
-          <label htmlFor="email">Email <span aria-hidden="true">*</span></label>
-          <input
-            id="email" name="email" type="email" autoComplete="email" inputMode="email" maxLength={LIMITS.email} required
-            value={values.email} onChange={(e) => set('email', e.target.value)}
-            aria-invalid={!!errors.email} aria-describedby={describedBy('email')}
-          />
-          <FieldError id="email-error" message={errors.email} />
-        </div>
+      <div className="field">
+        <label htmlFor="name">Your name <span aria-hidden="true">*</span></label>
+        <input
+          id="name" name="name" type="text" autoComplete="name" maxLength={LIMITS.name} required
+          value={values.name} onChange={(e) => set('name', e.target.value)}
+          aria-invalid={!!errors.name} aria-describedby={describedBy('name')}
+        />
+        <FieldError id="name-error" message={errors.name} />
       </div>
 
       <fieldset className="field field--group" aria-describedby={describedBy('contactMethod')}>
-        <legend>Best way to reach you <span aria-hidden="true">*</span></legend>
+        <legend>How would you like us to contact you? <span aria-hidden="true">*</span></legend>
         <div className="choice-row">
           {CONTACT_METHODS.map((m) => (
             <label key={m.id} className="choice" htmlFor={`contactMethod-${m.id}`}>
               <input
                 id={`contactMethod-${m.id}`} type="radio" name="contactMethod" value={m.id}
-                checked={values.contactMethod === m.id} onChange={() => set('contactMethod', m.id)}
+                checked={values.contactMethod === m.id} onChange={() => chooseMethod(m.id)}
               />
+              <Icon name={m.id === 'email' ? 'mail' : 'phone'} size={20} />
               <span>{m.label}</span>
             </label>
           ))}
@@ -199,16 +194,31 @@ export default function ContactForm() {
         <FieldError id="contactMethod-error" message={errors.contactMethod} />
       </fieldset>
 
-      <div className="field">
-        <label htmlFor="phone">
-          Phone {values.contactMethod === 'phone' ? <span aria-hidden="true">*</span> : <span className="field__optional">(optional)</span>}
-        </label>
-        <input
-          id="phone" name="phone" type="tel" autoComplete="tel" inputMode="tel" maxLength={LIMITS.phone}
-          value={values.phone} onChange={(e) => set('phone', e.target.value)}
-          aria-invalid={!!errors.phone} aria-describedby={describedBy('phone')}
-        />
-        <FieldError id="phone-error" message={errors.phone} />
+      {/* The box for the chosen method comes first and is required; the other is optional. */}
+      <div className="contact-fields">
+        {contactOrder.map((field) => {
+          const required = field === values.contactMethod;
+          const isPhone = field === 'phone';
+          return (
+            <div className="field" key={field}>
+              <label htmlFor={field}>
+                {isPhone ? 'Phone number' : 'Email address'}{' '}
+                {required ? <span aria-hidden="true">*</span> : <span className="field__optional">(optional)</span>}
+              </label>
+              <input
+                id={field} name={field}
+                type={isPhone ? 'tel' : 'email'}
+                autoComplete={isPhone ? 'tel' : 'email'}
+                inputMode={isPhone ? 'tel' : 'email'}
+                maxLength={isPhone ? LIMITS.phone : LIMITS.email}
+                required={required}
+                value={values[field]} onChange={(e) => set(field, e.target.value)}
+                aria-invalid={!!errors[field]} aria-describedby={describedBy(field)}
+              />
+              <FieldError id={`${field}-error`} message={errors[field]} />
+            </div>
+          );
+        })}
       </div>
 
       <div className="form-grid">
