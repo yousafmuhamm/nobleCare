@@ -1,0 +1,398 @@
+// Service menu. This file is plain data (no imports) so the contact form's
+// server-side validation can share the same list of service ids.
+//
+// Each service: id (used in links like /services#id), group, icon, name,
+// short (one line for cards), description, included (bullet list), fit,
+// optional image, optional note (scope reminder shown under the list) and
+// optional includedLabel (heading for the list, default "What's included").
+
+export const SERVICE_GROUPS = [
+  {
+    id: 'everyday',
+    title: 'Everyday care at home',
+    intro: 'Help with the daily routines that keep life comfortable, safe and familiar.',
+  },
+  {
+    id: 'specialized',
+    title: 'Specialized support',
+    intro: 'Steady, knowledgeable care for memory loss, disability, recovery and the end of life.',
+  },
+  {
+    id: 'relief',
+    title: 'Breaks and around-the-clock care',
+    intro: 'Relief for family caregivers, and care in the evenings, overnight and on weekends.',
+  },
+  {
+    id: 'staffing',
+    title: 'Staffing services',
+    intro: 'Screened care staff for families who hire privately and for care organizations.',
+  },
+];
+
+export const SERVICES = [
+  // ---------------------------------------------------------------- Everyday care at home
+  {
+    id: 'personal-care',
+    group: 'everyday',
+    icon: 'droplet',
+    name: 'Personal Care & Daily Living',
+    short: 'Help with bathing, dressing, grooming and getting around, given with dignity and at your loved one’s pace.',
+    description:
+      'Some everyday tasks get harder with age or illness, and asking for help can feel awkward. Our caregivers make it feel natural. They go at your loved one’s pace and respect their routines and privacy.',
+    included: [
+      'Bathing, showering and personal hygiene',
+      'Grooming, dressing and oral care',
+      'Toileting and continence care',
+      'Help walking, moving and transferring safely',
+      'Positioning and comfort',
+      'Help at mealtimes, including feeding',
+      'Morning and bedtime routines',
+      'Keeping an eye on everyday safety',
+    ],
+    fit: 'A good fit if your loved one needs a hand with daily routines but wants to stay in their own home.',
+  },
+  {
+    id: 'companionship',
+    group: 'everyday',
+    icon: 'users',
+    name: 'Companion & Social Support',
+    short: 'Friendly company, conversation and activities that bring more joy to each day.',
+    description:
+      'Loneliness is hard on anyone. A regular visitor who listens, laughs and shares a cup of tea can change how a whole week feels. We match people on personality and interests, not just schedules.',
+    included: [
+      'Regular companionship visits at home',
+      'Conversation and friendly social time',
+      'Reading, games, hobbies and other activities',
+      'Company on walks and community outings',
+      'Emotional support and encouragement',
+      'Wellness check-in visits',
+      'Company for your loved one while the family takes a break',
+      'Support for people who feel isolated',
+    ],
+    fit: 'A good fit if your loved one is mostly well but spends too much time alone.',
+    image: { src: 'knitting-companions.jpg', w: 1400, h: 990, alt: 'A caregiver sitting with older women who are knitting and chatting together' },
+  },
+  {
+    id: 'aging-in-place',
+    group: 'everyday',
+    icon: 'homeHeart',
+    name: 'Senior & Aging-in-Place Care',
+    short: 'Everyday support so older adults can keep living safely in the home they love.',
+    description:
+      'Most people want to grow older in their own home. With the right help at the right times, that is possible for longer than many families expect. We build care around your loved one’s routines and adjust it as needs change.',
+    included: [
+      'Everyday help so your loved one can stay at home',
+      'Support with daily living tasks',
+      'Meal and drink reminders',
+      'Help moving around safely and preventing falls',
+      'Keeping household routines on track',
+      'Company at appointments',
+      'Relief for family caregivers',
+      'Overnight and extended-hour care',
+      '24-hour care, where appropriate',
+    ],
+    fit: 'A good fit if your parent wants to stay at home and the family wants peace of mind.',
+    image: { src: 'activity-coloring.jpg', w: 1400, h: 990, alt: 'A caregiver helping an older man and woman with a colouring activity at a table' },
+  },
+  {
+    id: 'meals-nutrition',
+    group: 'everyday',
+    icon: 'utensils',
+    name: 'Meal Preparation & Nutrition',
+    short: 'Good food planned and cooked at home, with help at mealtimes when needed.',
+    description:
+      'Eating well makes a big difference to health and mood. We plan and cook meals your loved one enjoys, follow any diet they have been given, and make sure they eat and drink enough.',
+    included: [
+      'Meal planning',
+      'Grocery shopping',
+      'Home cooking and meal preparation',
+      'Help with eating, when needed',
+      'Reminders to drink enough',
+      'Following written dietary instructions',
+      'Kitchen clean-up',
+      'Letting the family know about changes in eating or drinking',
+    ],
+    fit: 'A good fit if cooking has become hard or meals are being skipped.',
+  },
+  {
+    id: 'housekeeping',
+    group: 'everyday',
+    icon: 'sparkles',
+    name: 'Light Housekeeping & Home Support',
+    short: 'A clean, tidy, comfortable home, with the small jobs taken care of.',
+    description:
+      'A tidy home is safer and easier to live in. We keep on top of the everyday jobs that pile up, so your loved one can enjoy their home instead of worrying about it.',
+    included: [
+      'Light cleaning',
+      'Laundry and changing bed linens',
+      'Making beds',
+      'Washing dishes and tidying the kitchen',
+      'Tidying the bathroom',
+      'Taking out the garbage',
+      'Keeping the main living area organized',
+      'Picking up groceries and essentials',
+    ],
+    fit: 'A good fit if the house is getting harder to keep up with.',
+  },
+  {
+    // SAMPLE: only offer driving clients if your insurance, driver screening and vehicle policies cover it.
+    id: 'transportation',
+    group: 'everyday',
+    icon: 'car',
+    name: 'Transportation & Accompaniment',
+    short: 'A friendly companion for appointments, errands and outings, from door to door.',
+    description:
+      'Getting out is good for the spirit, and appointments are easier with someone beside you. Our caregivers go with your loved one from their front door to the appointment and back, and make sure nothing gets missed.',
+    included: [
+      'Medical and clinic appointments',
+      'Hospital visits',
+      'Pharmacy trips',
+      'Grocery shopping',
+      'Banking and other errands',
+      'Community activities and religious services',
+      'Family and social events',
+      'Door-to-door help, there and back',
+    ],
+    fit: 'A good fit if getting to appointments or running errands has become stressful.',
+    image: { src: 'wheelchair-sunset-walk.jpg', w: 1400, h: 933, alt: 'A person pushing someone in a wheelchair across a park at golden hour' },
+  },
+  {
+    id: 'medication-support',
+    group: 'everyday',
+    icon: 'pill',
+    name: 'Medication Support',
+    short: 'Reminders and steady routines so medications are taken as prescribed.',
+    description:
+      'Missed or doubled doses are a common worry. Our caregivers give on-time reminders, help keep established routines on track and keep a simple record for the family.',
+    included: [
+      'Medication reminders',
+      'Help with established medication routines, where permitted',
+      'Pharmacy pickups',
+      'Notes and reporting as set out in the care plan',
+    ],
+    fit: 'A good fit if your loved one is fairly independent but sometimes forgets medication.',
+    note: 'Our caregivers do not give injections, change doses or provide other clinical care. That stays with your doctor, pharmacist or nurse.',
+  },
+
+  // ---------------------------------------------------------------- Specialized support
+  {
+    id: 'dementia-care',
+    group: 'specialized',
+    icon: 'frame',
+    name: 'Dementia & Memory Support',
+    short: 'Patient, calm support that keeps days familiar, safe and meaningful.',
+    description:
+      'Memory loss changes how a person experiences the world. Our caregivers learn what comforts your loved one and keep days predictable, kind and safe. We work with your family so care follows the person, not just the diagnosis.',
+    included: [
+      'Companionship from caregivers who understand dementia',
+      'Help with routines and staying oriented',
+      'Watching out for safety',
+      'Meal and drink reminders',
+      'Personal care',
+      'Meaningful activities and engagement',
+      'Relief for family caregivers',
+      'Supervision for wandering risk, as set out in the care plan',
+    ],
+    fit: 'A good fit if memory changes are affecting daily life or safety at home.',
+    image: { src: 'hands-holding.jpg', w: 1400, h: 933, alt: 'A younger hand gently holding an older hand in warm light' },
+  },
+  {
+    id: 'disability-support',
+    group: 'specialized',
+    icon: 'accessible',
+    name: 'Disability & Independent-Living Support',
+    short: 'Practical support for adults living with a disability who want to live independently.',
+    description:
+      'Independence looks different for everyone. We help with the parts of the day that need an extra pair of hands, so the people we support can live the way they choose, at home and in their community.',
+    included: [
+      'Personal assistance',
+      'Help moving and transferring',
+      'Meal preparation',
+      'Household tasks',
+      'Getting out and taking part in the community',
+      'Company at appointments',
+      'Shopping and errands',
+      'Support with daily routines',
+    ],
+    fit: 'A good fit if an adult in your family needs help to live independently.',
+  },
+  {
+    id: 'hospital-to-home',
+    group: 'specialized',
+    icon: 'homeArrow',
+    name: 'Hospital-to-Home Support',
+    short: 'A calm, safe return home after a hospital stay.',
+    description:
+      'Coming home from hospital is a vulnerable time. We help your loved one settle back in safely, follow the discharge plan and get back into a routine, so the whole family can worry less.',
+    included: [
+      'Help after hospital discharge',
+      'Settling back in safely at home',
+      'Meal preparation',
+      'Personal care',
+      'Help moving around',
+      'Company at follow-up appointments',
+      'Household help',
+      'Relief for family caregivers',
+      'Watching for concerns and raising them as set out in the care plan',
+    ],
+    fit: 'A good fit if a hospital stay is ending soon or has just ended.',
+    note: 'This is non-medical support. Nursing and medical care stay with your health care team.',
+  },
+  {
+    id: 'recovery-care',
+    group: 'specialized',
+    icon: 'sunrise',
+    name: 'Post-Surgery & Recovery Support',
+    short: 'Extra hands at home while your loved one recovers from surgery or illness.',
+    description:
+      'Recovery goes better with rest, good food and someone nearby. We take care of the everyday things so your loved one can focus on getting stronger.',
+    included: [
+      'Personal care',
+      'Meal preparation',
+      'Help moving around',
+      'Household help',
+      'Rides and company at appointments',
+      'Medication reminders',
+      'Overnight help',
+      'Relief for family caregivers',
+    ],
+    fit: 'A good fit if surgery is coming up, or your loved one is recovering from an illness.',
+    note: 'We provide non-medical support only. Wound care and other nursing care are provided by your health care team.',
+    image: { src: 'couple-laughing-outdoors.jpg', w: 1000, h: 1500, alt: 'An older couple laughing together outside a brick home, she uses a walker' },
+  },
+  {
+    id: 'palliative-care',
+    group: 'specialized',
+    icon: 'leaf',
+    name: 'Palliative & End-of-Life Support',
+    short: 'Quiet comfort and presence for your loved one, and support for the whole family.',
+    description:
+      'At this stage, comfort and dignity matter most. We work alongside your loved one’s clinical team so they can stay at home, surrounded by what is familiar, with someone gentle always close by.',
+    included: [
+      'Comfort-focused, non-medical care',
+      'Personal care',
+      'Companionship',
+      'Relief for family members',
+      'Meals and household help',
+      'Overnight presence',
+      'Emotional support for your loved one and family',
+    ],
+    fit: 'A good fit if you want your loved one to be comfortable at home.',
+    note: 'Clinical palliative care is provided by qualified health professionals. We work alongside them.',
+    image: { src: 'hands-support.jpg', w: 1000, h: 1500, alt: 'Several hands holding one another in support against a dark background' },
+  },
+
+  // ---------------------------------------------------------------- Breaks and around-the-clock care
+  {
+    id: 'respite-care',
+    group: 'relief',
+    icon: 'coffee',
+    name: 'Respite Care',
+    short: 'Reliable breaks for family caregivers, from a few hours to a full weekend.',
+    description:
+      'Caring for someone you love is a gift, and it is also exhausting. Respite care gives you time to rest, run errands or simply breathe, knowing a trusted person is with your family member.',
+    included: [
+      'Hourly breaks',
+      'Daytime or evening respite',
+      'Overnight respite',
+      'Weekend respite',
+      'Planned, regular relief',
+      'Short-notice emergency cover, when staff are available',
+    ],
+    fit: 'A good fit if you are the main caregiver and running on empty.',
+    image: { src: 'photo-album-together.jpg', w: 1400, h: 932, alt: 'A younger woman and an older man laughing together over a photo album on a sofa' },
+  },
+  {
+    id: 'overnight-care',
+    group: 'relief',
+    icon: 'moon',
+    name: 'Overnight & Extended Care',
+    short: 'Someone there in the evening, through the night, or for longer shifts.',
+    description:
+      'Nights can be the hardest time for families. Whether your loved one needs someone awake all night or just a reassuring presence, help is close by when it matters.',
+    included: [
+      'Evening care',
+      'Overnight supervision',
+      'An awake overnight caregiver',
+      'A sleep-over caregiver, where appropriate',
+      'Early-morning help',
+      'Extended shifts',
+      'Weekend and holiday cover',
+    ],
+    fit: 'A good fit if your loved one should not be alone at night.',
+  },
+  {
+    id: 'family-caregiver-support',
+    group: 'relief',
+    icon: 'handHeart',
+    name: 'Family Caregiver Support',
+    short: 'Practical backup and clear communication for the family members who do the caring.',
+    description:
+      'Family caregivers carry a lot. We step in when you need a break, keep everyone informed and make sure changes are noticed and acted on early.',
+    included: [
+      'Scheduled breaks for family caregivers',
+      'Cover while you are on vacation',
+      'Short-term replacement care',
+      'Showing family members our care routines',
+      'Family updates, with your loved one’s consent',
+      'Coordinating caregiver schedules',
+      'Reporting and acting on changes in condition',
+    ],
+    fit: 'A good fit if you are caring for someone and need a reliable partner.',
+  },
+
+  // ---------------------------------------------------------------- Staffing services
+  {
+    id: 'private-staffing',
+    group: 'staffing',
+    icon: 'userCheck',
+    name: 'Private Home Staffing',
+    short: 'Carefully screened care staff for families who want to hire privately.',
+    description:
+      'Some families want dedicated, private staff at home. We find, screen and place the right person for your family’s needs and schedule, and stay available if anything changes.',
+    includedLabel: 'Staff we can provide',
+    included: [
+      'Caregivers',
+      'Health care aides',
+      'Companions',
+      'Respite workers',
+      'Home support workers and homemakers',
+      'Private-duty support staff',
+      'Overnight caregivers',
+      'Live-in arrangements, where appropriate',
+    ],
+    fit: 'A good fit if your family wants dedicated care staff at home.',
+  },
+  {
+    id: 'business-staffing',
+    group: 'staffing',
+    icon: 'building',
+    name: 'Staffing for Care Organizations',
+    short: 'Reliable care and support staff for residences, care providers and community organizations.',
+    description:
+      'We supply screened, trained care staff to organizations that need extra hands, whether for a few shifts or an ongoing arrangement.',
+    includedLabel: 'Who we work with',
+    included: [
+      'Seniors’ residences',
+      'Assisted-living and supportive-living operators',
+      'Retirement residences',
+      'Other home-care providers',
+      'Community organizations',
+      'Private care facilities',
+      'Organizations needing temporary or ongoing care staff',
+    ],
+    fit: 'A good fit if your organization needs dependable care staff, short or long term.',
+    note: 'Contract terms, staff qualifications and insurance are agreed with each organization.',
+    contactFor: 'organization',
+  },
+];
+
+// The six services shown as cards on the Home page.
+export const HOME_SERVICE_IDS = [
+  'personal-care',
+  'companionship',
+  'dementia-care',
+  'respite-care',
+  'hospital-to-home',
+  'overnight-care',
+];

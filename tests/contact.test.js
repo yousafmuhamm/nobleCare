@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { PATHS, SERVICES } from '../src/content.js';
+import { HOME_SERVICE_IDS, PATHS, SERVICES, SERVICE_GROUPS } from '../src/content.js';
 import { CARE_FOR_OPTIONS, SERVICE_IDS, validateContact } from '../shared/contact-schema.js';
 import { SERVICE_NAMES } from '../server/service-names.js';
 import { buildEmail, createRateLimiter, escapeHtml, handleContactRequest } from '../server/contact.js';
@@ -59,6 +59,15 @@ test('form option ids match the site content', () => {
   assert.deepEqual(Object.keys(SERVICE_NAMES), SERVICE_IDS);
   const careIds = CARE_FOR_OPTIONS.map((o) => o.id);
   for (const p of PATHS) assert.ok(careIds.includes(p.id), `picker path ${p.id} missing from form options`);
+});
+
+test('every service the site links to exists, and every service has a known group', () => {
+  const ids = new Set(SERVICES.map((s) => s.id));
+  for (const id of HOME_SERVICE_IDS) assert.ok(ids.has(id), `home card ${id}`);
+  for (const p of PATHS) for (const id of p.services) assert.ok(ids.has(id), `picker ${p.id} -> ${id}`);
+  const groups = new Set(SERVICE_GROUPS.map((g) => g.id));
+  for (const s of SERVICES) assert.ok(groups.has(s.group), `${s.id} group ${s.group}`);
+  assert.equal(ids.size, SERVICES.length, 'service ids are unique');
 });
 
 test('valid submission is sent to Resend with the key server-side only', async () => {

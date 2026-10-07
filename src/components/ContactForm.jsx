@@ -3,7 +3,7 @@ import { Link, useSearchParams } from 'react-router-dom';
 import {
   CARE_FOR_OPTIONS, CONTACT_METHODS, LIMITS, SERVICE_IDS, TIMING_OPTIONS, validateContact,
 } from '../../shared/contact-schema.js';
-import { BUSINESS, PHONE_HREF, PHONE_LABEL, SERVICES } from '../content.js';
+import { BUSINESS, PHONE_HREF, PHONE_LABEL, SERVICES, SERVICE_GROUPS } from '../content.js';
 import Icon from './Icon.jsx';
 
 const FIELD_TARGET = {
@@ -24,6 +24,7 @@ function focusField(e, id) {
   const el = document.getElementById(id);
   if (!el) return;
   e.preventDefault();
+  el.closest('details')?.setAttribute('open', '');
   el.scrollIntoView({ block: 'center' });
   el.focus({ preventScroll: true });
 }
@@ -247,21 +248,35 @@ export default function ContactForm() {
         </div>
       </div>
 
-      <fieldset className="field field--group" aria-describedby={describedBy('services')}>
-        <legend>Services you are interested in <span className="field__optional">(optional)</span></legend>
-        <div className="choice-grid">
-          {SERVICES.map((s) => (
-            <label key={s.id} className="choice" htmlFor={`service-${s.id}`}>
-              <input
-                id={`service-${s.id}`} type="checkbox" name="services" value={s.id}
-                checked={values.services.includes(s.id)} onChange={() => toggleService(s.id)}
-              />
-              <span>{s.name}</span>
-            </label>
+      <details className="services-picker" open={presetService.length > 0}>
+        <summary>
+          <span>
+            Services you are interested in <span className="field__optional">(optional)</span>
+          </span>
+          {values.services.length > 0 && <span className="services-picker__count">{values.services.length} chosen</span>}
+          <Icon name="plus" size={22} className="services-picker__icon" />
+        </summary>
+        <fieldset className="field field--group" aria-describedby={describedBy('services')}>
+          <legend className="visually-hidden">Services you are interested in</legend>
+          {SERVICE_GROUPS.map((g) => (
+            <fieldset key={g.id} className="choice-group">
+              <legend className="choice-group__title">{g.title}</legend>
+              <div className="choice-grid">
+                {SERVICES.filter((s) => s.group === g.id).map((s) => (
+                  <label key={s.id} className="choice" htmlFor={`service-${s.id}`}>
+                    <input
+                      id={`service-${s.id}`} type="checkbox" name="services" value={s.id}
+                      checked={values.services.includes(s.id)} onChange={() => toggleService(s.id)}
+                    />
+                    <span>{s.name}</span>
+                  </label>
+                ))}
+              </div>
+            </fieldset>
           ))}
-        </div>
-        <FieldError id="services-error" message={errors.services} />
-      </fieldset>
+          <FieldError id="services-error" message={errors.services} />
+        </fieldset>
+      </details>
 
       <div className="field">
         <label htmlFor="message">

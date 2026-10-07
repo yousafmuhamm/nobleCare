@@ -43,6 +43,10 @@ export const FAQS = [
         q: 'Can caregivers give medication?',
         a: 'Our caregivers give reminders and can prompt from pill organizers prepared by a pharmacist or family member. They do not change doses or give medical advice. If your loved one needs nursing care, we can work alongside your health care team.',
       },
+      {
+        q: 'Do your caregivers provide nursing or medical care?',
+        a: 'No. Our caregivers provide non-medical support, such as personal care, companionship, meals, household help and medication reminders. They do not give injections, treat wounds or carry out other clinical procedures. When someone needs nursing or medical care, we work alongside their doctors, nurses and home care team.',
+      },
     ],
   },
   {
@@ -60,6 +64,20 @@ export const FAQS = [
       {
         q: 'Do I have to sign a long-term contract?',
         a: 'No. You can change, pause or end care at any time. We just ask for a little notice so we can let your caregiver know.', // SAMPLE
+      },
+    ],
+  },
+  {
+    id: 'staffing',
+    title: 'Staffing services',
+    items: [
+      {
+        q: 'Can we hire a caregiver privately through you?',
+        a: 'Yes. Through our private home staffing service, we find, screen and place caregivers, companions, home support workers and overnight staff for families who want dedicated help at home.',
+      },
+      {
+        q: 'Do you provide staff for care homes and other organizations?',
+        a: 'Yes. We supply screened care and support staff to seniors\u2019 residences, supportive-living sites, other home-care providers and community organizations, for a few shifts or an ongoing arrangement. Contract terms are agreed with each organization.',
       },
     ],
   },

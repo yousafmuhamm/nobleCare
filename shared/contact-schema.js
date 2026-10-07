@@ -2,12 +2,15 @@
 // so validation can never drift between the two. Keep this file free of
 // browser-only or Node-only APIs.
 
+import { SERVICES } from '../src/content/services.js';
+
 export const CARE_FOR_OPTIONS = [
   { id: 'parent', label: 'My mom or dad' },
   { id: 'partner', label: 'My husband, wife or partner' },
   { id: 'self', label: 'Myself' },
   { id: 'caregiver', label: 'I’m a family caregiver and I need a break' },
   { id: 'other', label: 'Another family member or friend' },
+  { id: 'organization', label: 'My organization needs care staff' },
 ];
 
 export const TIMING_OPTIONS = [
@@ -21,19 +24,8 @@ export const CONTACT_METHODS = [
   { id: 'email', label: 'Email' },
 ];
 
-// Must match the service ids in src/content/services.js (a test checks this).
-export const SERVICE_IDS = [
-  'personal-care',
-  'companionship',
-  'respite-care',
-  'dementia-care',
-  'recovery-care',
-  'palliative-care',
-  'live-in-care',
-  'housekeeping-meals',
-  'medication-reminders',
-  'transportation',
-];
+// Service ids come straight from the site content, so the form and server always agree.
+export const SERVICE_IDS = SERVICES.map((s) => s.id);
 
 export const LIMITS = {
   name: 100,
