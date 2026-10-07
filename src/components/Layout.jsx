@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
-import { BUSINESS, NAV, PHONE_HREF, PHONE_LABEL } from '../content.js';
+import { BUSINESS, NAV, PHONE_HREF, PHONE_LABEL, TAGLINE } from '../content.js';
 import Button from './Button.jsx';
 import Icon from './Icon.jsx';
 import Logo from './Logo.jsx';
@@ -121,6 +121,7 @@ export default function Layout() {
         <div className="container site-footer__grid">
           <div className="site-footer__about">
             <Logo light />
+            <p className="tagline tagline--light">{TAGLINE.join(' \u2022 ')}</p>
             <p>Gentle, dependable in-home care for seniors and the families who love them.</p>
           </div>
           <nav aria-label="Footer">

@@ -1,5 +1,5 @@
 import Button from './Button.jsx';
-import { PHONE_HREF, PHONE_LABEL } from '../content.js';
+import { PHONE_HREF, PHONE_LABEL, TAGLINE } from '../content.js';
 
 export default function CtaBand({
   title = 'Let’s talk about care for your loved one',
@@ -10,6 +10,7 @@ export default function CtaBand({
       <div className="container">
         <div className="cta__panel">
           <img className="cta__watermark" src="/images/logo-mark-mono.png" width="456" height="480" alt="" />
+          <p className="tagline">{TAGLINE.join(' \u2022 ')}</p>
           <h2 id="cta-title">{title}</h2>
           <p>{text}</p>
           <div className="actions actions--center">

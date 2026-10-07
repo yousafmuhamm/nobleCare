@@ -39,7 +39,7 @@ export const PATHS = [
     title: 'It is okay to ask for a little help.',
     message:
       'Wanting to stay in your own home is completely reasonable. We help with the parts of the day that have become harder, and you stay in charge of how things are done.',
-    services: ['housekeeping', 'meals-nutrition', 'transportation'],
+    services: ['housekeeping-errands', 'meals-home-support', 'transportation'],
   },
   {
     id: 'caregiver',
@@ -48,7 +48,7 @@ export const PATHS = [
     title: 'You deserve rest too.',
     message:
       'Needing a break does not mean you love them any less. Our caregivers can cover a few hours, an evening or a few nights, and leave you a note so you know how it went.',
-    services: ['respite-care', 'family-caregiver-support', 'overnight-care'],
+    services: ['respite-care', 'overnight-care', 'dementia-care'],
   },
 ];
 

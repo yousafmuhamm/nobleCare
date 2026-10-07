@@ -73,7 +73,7 @@ export const FAQS = [
     items: [
       {
         q: 'Can we hire a caregiver privately through you?',
-        a: 'Yes. Through our private home staffing service, we find, screen and place caregivers, companions, home support workers and overnight staff for families who want dedicated help at home.',
+        a: 'Yes. Through our Private Caregiver & Healthcare Staffing service, we find, screen and place caregivers, companions, health care aides, home support workers and overnight staff for families who want dedicated help at home.',
       },
       {
         q: 'Do you provide staff for care homes and other organizations?',

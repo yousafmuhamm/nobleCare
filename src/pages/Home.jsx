@@ -10,7 +10,7 @@ import PathPicker from '../components/PathPicker.jsx';
 import PhotoFrame from '../components/PhotoFrame.jsx';
 import Testimonials from '../components/Testimonials.jsx';
 import {
-  BUSINESS, CITY, COMMUNITIES, HOME_SERVICE_IDS, PHONE_HREF, PHONE_LABEL, SERVICES, STEPS, TRUST, WHY, img,
+  BUSINESS, CITY, COMMUNITIES, HOME_SERVICE_IDS, TAGLINE, PHONE_HREF, PHONE_LABEL, SERVICES, STEPS, TRUST, WHY, img,
 } from '../content.js';
 import usePageMeta from '../usePageMeta.js';
 
@@ -18,6 +18,7 @@ const JSON_LD = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: BUSINESS.name,
+  slogan: TAGLINE.join(', '),
   description: `In-home senior care for families in ${CITY} and surrounding areas.`,
   url: BUSINESS.website,
   logo: `${BUSINESS.website}/images/logo.png`,

@@ -106,7 +106,7 @@ function NotSure() {
 export default function Services() {
   usePageMeta(
     'Home Care Services | North & Noble Care',
-    `Personal care, companionship, dementia support, respite, overnight care, hospital-to-home support and care staffing. See all ${SERVICES.length} services from North & Noble Care.`
+    `Personal care, aging-in-place care, companionship, dementia support, respite, hospital-to-home and recovery support, overnight care and caregiver staffing. See all ${SERVICES.length} services from North & Noble Care.`
   );
 
   return (
@@ -132,7 +132,7 @@ export default function Services() {
           <ul className="jump__groups">
             {SERVICE_GROUPS.map((g) => (
               <li key={g.id} className="jump__group">
-                <a className="jump__group-link" href={`#${g.id}`}><NoBreak text={g.title} /></a>
+                <a className="jump__group-link" href={`#${g.id}`}><span><NoBreak text={g.title} /></span></a>
                 <ul className="jump__list">
                   {servicesIn(g.id).map((s) => (
                     <li key={s.id}>

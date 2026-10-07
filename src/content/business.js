@@ -24,6 +24,8 @@ export const BUSINESS = {
   legalLine: 'Insured and bonded. All caregivers pass a police information check.', // SAMPLE
 };
 
+export const TAGLINE = ['Compassionate Care', 'Dignified Living', 'Trusted Support'];
+
 export const CITY = BUSINESS.address.city;
 export const PHONE_LABEL = BUSINESS.phoneDisplay;
 export const PHONE_HREF = BUSINESS.phoneHref;
