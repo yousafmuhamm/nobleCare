@@ -42,7 +42,10 @@ export default function About() {
               <p key={p}>{p}</p>
             ))}
             <p className="founder__sign">{FOUNDER.name}</p>
-            <p className="founder__role">{FOUNDER.role}, North &amp; Noble Care</p>
+            {FOUNDER.role && <p className="founder__role">{FOUNDER.role}, North &amp; Noble Care</p>}
+            <div className="actions">
+              <Button to="/team" variant="ghost" icon="arrow">Meet our team</Button>
+            </div>
           </div>
           <div className="story__media">
             <PhotoFrame

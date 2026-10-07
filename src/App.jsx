@@ -7,6 +7,7 @@ import Home from './pages/Home.jsx';
 import NotFound from './pages/NotFound.jsx';
 import Privacy from './pages/Privacy.jsx';
 import Services from './pages/Services.jsx';
+import Team from './pages/Team.jsx';
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path="services" element={<Services />} />
         <Route path="about" element={<About />} />
+        <Route path="team" element={<Team />} />
         <Route path="faq" element={<Faq />} />
         <Route path="contact" element={<Contact />} />
         <Route path="privacy" element={<Privacy />} />

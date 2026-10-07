@@ -27,6 +27,7 @@ Two things need special care:
 
 - **Testimonials** must be real quotes from real clients, used with permission. While `TESTIMONIALS_ARE_SAMPLES` is `true`, the site shows a visible "sample" note beside them. Set it to `false` only once they are real.
 - **The privacy policy** (`src/pages/Privacy.jsx`) is a starting point, not legal advice. Have it reviewed.
+- **Team photos:** save portraits as `public/images/team/ajit-hardasani.jpg` and `public/images/team/alejandro-pagcaliwagan.jpg`. Until then the Team page shows the logo. Names, roles and bios are in `src/content/team.js`.
 
 ## API keys and secrets
 

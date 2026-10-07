@@ -68,7 +68,7 @@ export default function Layout() {
       <header className="site-header">
         <div className="container site-header__inner">
           <Link to="/" className="site-header__brand" aria-label="North & Noble Care, home">
-            <Logo />
+            <Logo alt="" />
           </Link>
           <nav className="nav nav--desktop" aria-label="Main">
             <NavLinks />

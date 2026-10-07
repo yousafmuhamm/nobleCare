@@ -1,5 +1,4 @@
 import Button from './Button.jsx';
-import LogoMark from './LogoMark.jsx';
 import { PHONE_HREF, PHONE_LABEL } from '../content.js';
 
 export default function CtaBand({
@@ -10,7 +9,7 @@ export default function CtaBand({
     <section className="cta bg-cream" aria-labelledby="cta-title">
       <div className="container">
         <div className="cta__panel">
-          <LogoMark className="cta__watermark" ink="#0F2A4A" heart="#0F2A4A" />
+          <img className="cta__watermark" src="/images/logo-mark-mono.png" width="456" height="480" alt="" />
           <h2 id="cta-title">{title}</h2>
           <p>{text}</p>
           <div className="actions actions--center">

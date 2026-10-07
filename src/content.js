@@ -2,11 +2,13 @@ export * from './content/business.js';
 export * from './content/about.js';
 export * from './content/faq.js';
 export * from './content/services.js';
+export * from './content/team.js';
 
 export const NAV = [
   { to: '/', label: 'Home' },
   { to: '/services', label: 'Services' },
   { to: '/about', label: 'About' },
+  { to: '/team', label: 'Team' },
   { to: '/faq', label: 'FAQ' },
   { to: '/contact', label: 'Contact' },
 ];

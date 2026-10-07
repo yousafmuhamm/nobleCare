@@ -1,6 +1,5 @@
 import { FOUNDER, img } from '../content.js';
 import Button from './Button.jsx';
-import LogoMark from './LogoMark.jsx';
 import Ornament from './Ornament.jsx';
 import PhotoFrame from './PhotoFrame.jsx';
 
@@ -20,23 +19,23 @@ export default function FounderNote() {
           ) : (
             <div className="frame frame--arch">
               <div className="frame__img founder__placeholder">
-                <LogoMark className="founder__mark" />
+                <img className="founder__mark" src="/images/logo-mark.png" width="456" height="480" alt="" />
               </div>
             </div>
           )}
         </div>
         <div className="founder__copy">
           <Ornament />
-          <h2 id="founder-title">A note from our founder</h2>
+          <h2 id="founder-title">{FOUNDER.role ? 'A note from our leadership' : 'A note from our team'}</h2>
           <div className="founder__letter">
             {FOUNDER.note.map((p) => (
               <p key={p}>{p}</p>
             ))}
           </div>
           <p className="founder__sign">{FOUNDER.name}</p>
-          <p className="founder__role">{FOUNDER.role}, North &amp; Noble Care</p>
+          {FOUNDER.role && <p className="founder__role">{FOUNDER.role}, North &amp; Noble Care</p>}
           <div className="actions">
-            <Button to="/about" variant="ghost" icon="arrow">Read our story</Button>
+            <Button to="/team" variant="ghost" icon="arrow">Meet our team</Button>
           </div>
         </div>
       </div>

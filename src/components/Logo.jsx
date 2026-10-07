@@ -1,13 +1,14 @@
-import LogoMark from './LogoMark.jsx';
-
-export default function Logo({ light = false }) {
+// The real North & Noble Care logo, in a horizontal layout for the header,
+// menu and footer. `light` is the version for dark backgrounds.
+// Pass alt="" when the logo sits inside a link that already has a label.
+export default function Logo({ light = false, alt = 'North & Noble Care' }) {
   return (
-    <span className={`logo${light ? ' logo--light' : ''}`}>
-      <LogoMark className="logo__mark" ink={light ? '#FBF8F3' : '#0F2A4A'} />
-      <span className="logo__text">
-        <span className="logo__name">North &amp; Noble</span>
-        <span className="logo__tag">Care at home</span>
-      </span>
-    </span>
+    <img
+      className={`logo${light ? ' logo--light' : ''}`}
+      src={light ? '/images/logo-horizontal-light.png' : '/images/logo-horizontal.png'}
+      width="646"
+      height="168"
+      alt={alt}
+    />
   );
 }

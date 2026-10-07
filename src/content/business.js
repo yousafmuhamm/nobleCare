@@ -41,16 +41,18 @@ export const COMMUNITIES = [
 ];
 
 export const FOUNDER = {
-  name: 'Margaret Ellis', // SAMPLE
-  role: 'Founder & Care Director', // SAMPLE
+  // Signed by the team. To have a person sign it, set name to theirs and add role,
+  // e.g. name: 'Ajit Hardasani', role: 'General Manager'.
+  name: 'The North & Noble Care team',
+  role: null,
   // Add a real photo (portrait, at least 800px wide) to public/images and set
   // e.g. photo: { src: 'founder.jpg', w: 1000, h: 1250 }. Until then, the logo shows.
   photo: null,
-  // SAMPLE: rewrite in the founder's own words.
+  // SAMPLE: rewrite in your own words.
   note: [
     'Choosing care for someone you love is one of the hardest decisions a family makes. You want them safe. You want them to still feel like themselves. And you want to trust the person walking through their front door.',
-    'That is why I started North & Noble Care. We hire caregivers we would welcome into our own homes, we take the time to match them well, and we keep you in the loop every step of the way.',
-    'If you are worried about someone right now, I hope you will call us. Even if we are not the right fit, we will help you find your next step.',
+    'That is why we started North & Noble Care. We hire caregivers we would welcome into our own homes, we take the time to match them well, and we keep you in the loop every step of the way.',
+    'If you are worried about someone right now, we hope you will call us. Even if we are not the right fit, we will help you find your next step.',
   ],
 };
 

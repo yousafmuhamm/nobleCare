@@ -20,6 +20,8 @@ const JSON_LD = {
   name: BUSINESS.name,
   description: `In-home senior care for families in ${CITY} and surrounding areas.`,
   url: BUSINESS.website,
+  logo: `${BUSINESS.website}/images/logo.png`,
+  image: `${BUSINESS.website}/images/og-image.png`,
   telephone: BUSINESS.phoneDisplay,
   email: BUSINESS.email,
   address: {
