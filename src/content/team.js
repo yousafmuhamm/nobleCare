@@ -27,8 +27,11 @@ export const TEAM = [
     role: 'President & CEO',
     photo: { src: 'team/laarni-de-guzman.jpg' },
     bio: [
-      // SAMPLE: replace with Laarni's full bio.
-      'Laarni de Guzman leads North & Noble Care as President & CEO.',
+      // SAMPLE: written for the site; have Laarni check it and add any specific background she would like included.
+      'Laarni de Guzman is the President and Chief Executive Officer of North & Noble Care. She leads the company\u2019s vision, strategy and day-to-day direction, with a clear focus on delivering compassionate, dependable in-home care to seniors and their families across the communities the company serves.',
+      'As President & CEO, Laarni oversees service quality, caregiver standards, client relationships and the growth of the organization. She believes that great care begins with great people, and she is committed to building a team of caregivers who are carefully screened, well trained and genuinely kind.',
+      'Her leadership is guided by the values at the heart of North & Noble Care: compassionate care, dignified living and trusted support. She places a strong emphasis on open communication with families, consistent caregiver matching and care plans that respect each client\u2019s routines, preferences and independence.',
+      'With warmth, integrity and close attention to detail, Laarni is dedicated to making North & Noble Care a name families can trust, helping more people grow older safely and comfortably in the place they know best: home.',
     ],
   },
   {
