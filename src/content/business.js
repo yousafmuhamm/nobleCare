@@ -9,14 +9,14 @@
 export const BUSINESS = {
   name: 'North & Noble Care',
   website: 'https://www.northandnoblecare.ca', // SAMPLE
-  phoneDisplay: '(403) 555-0142', // SAMPLE (555-01xx numbers are reserved for fiction)
-  phoneHref: 'tel:+14035550142', // SAMPLE
-  email: 'hello@northandnoblecare.ca', // SAMPLE
+  phoneDisplay: '(437) 868-1988',
+  phoneHref: 'tel:+14378681988',
+  email: 'ajit_hardasani88@yahoo.com',
   address: {
-    street: 'Suite 210, 123 Sample Avenue SW', // SAMPLE
-    city: 'Calgary', // SAMPLE
-    region: 'AB', // SAMPLE
-    postalCode: 'T2P 0A1', // SAMPLE
+    street: '7015 Macleod Trl SW',
+    city: 'Calgary',
+    region: 'AB',
+    postalCode: 'T2H 2K6',
   },
   officeHours: 'Monday to Friday, 8 a.m. to 6 p.m.', // SAMPLE
   careHours: 'Care is available 24 hours a day, 7 days a week', // SAMPLE
